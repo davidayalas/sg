@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<!--
+	Introspect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+--> 
+<html>
+	<head>
+	    {{ partial "head.html" . }}
+	</head>
+	<body class="{{.Section}}">
+
+	    {{ partial "menu.html" . }}
+
+		<!-- Main -->
+			<section id="main" >
+				<div class="inner">
+				    {{ partial "breadcrumbs" . }}
+					<header class="major special">
+						<h1>{{.Title}}</h1>
+			            {{ if eq .Section "noticies" }}
+							{{ .Date.Format "02-01-2006" }}
+							<p class="lead">{{.Description}}</p>
+						{{ end }}
+					</header>
+
+		            {{ if ne .Section "galeria" }}
+							<p class="desc">{{.Content}}</p>
+					{{ end }}
+
+		            {{ if eq .Section "noticies" }}
+		            	{{ if .Params.images }}
+							{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+		            		{{ range .Params.images }}	
+				              	{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
+				              	{{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
+				              		{{ $.Scratch.Set "resized" ($image.Resize "600x q75") }}
+				              	{{ else if gt $image.Width 400 }}
+				              		{{ $.Scratch.Set "resized" ($image.Resize "400x q75") }}
+				              	{{ else }}
+				              		{{ $.Scratch.Set "resized" $image }}
+				              	{{ end }}
+				              	{{.title}}<br />
+			              		<a href="{{$image.RelPermalink}}"><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="{{.title}}" title="{{.title}}"  /></a><br />
+		            		{{ end }}
+		            	{{ end  }}
+		            {{ end }}
+
+		            {{ if eq .Section "galeria" }}
+	                    <span class="image fit small-font ">
+		                    <div class="8u 12u(xsmall)">
+		                      <a class="align-center" href="{{.Params.image}}">
+		                        <img src="{{.Params.image}}" alt="{{.Title}}" class="6u 12u(xsmall)">
+		                      </a>
+		                  	</div>
+							<p>{{.Title}}</p>
+							<p>{{.Description}}</p>
+							<p>{{ .Date.Format "02-01-2006" }}</p>
+	                    </span>
+					{{ end }}
+				</div>
+			</section>
+
+	    {{ partial "footer.html" . }}
+
+	</body>
+</html>

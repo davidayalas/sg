@@ -1,0 +1,73 @@
+backend:
+  branch: master
+  name: git-gateway
+  #name: github
+  #repo: davidayalas/new-ckm
+
+display_url: https://www.sambogranollers.com
+
+media_folder: "/content/media" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/media"
+#publish_mode: editorial_workflow
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "galeria"
+    label: "Galeria"
+    folder: "content/galeria"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: string}
+      - {label: "Fecha", name: "date", widget: date}
+      - {label: "Image", name: "image", widget: image}
+
+  - name: "general"
+    label: "General"
+    folder: "content"
+    create: false
+    delete: false
+    editor: 
+      preview: false     
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string", required: true}
+      - {label: "Título 2", name: "title2", widget: "string", required: true}
+      - {label: "Descripción", name: "description", widget: "string", required: true}
+      - {label: "Dirección", name: "address", widget: "string", required: true}
+      - {label: "Teléfono", name: "phone", widget: "string", required: true}
+      - {label: "Email", name: "email", widget: "string", required: true}
+
+  - name: "news"
+    label: "Noticias"
+    folder: "content/news"
+    sort: "date:desc"
+    create: true
+    slug: "{{slug}}"
+    editor: 
+      preview: false     
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
+      - name: images
+        label: Imágenes
+        widget: list
+        fields:
+          - {label: "Descripción", name: "title", widget: string}
+          - {label: "Imagen", name: "image", widget: image}
+
+  - name: "agenda"
+    label: "Agenda"
+    folder: "content/agenda"
+    create: true
+    slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
+    editor: 
+      preview: false     
+    sort: "date:desc"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "string", required: false}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Hora", name: "hora", widget: "string"}
+      - {label: "Lugar", name: "lloc", widget: "string"}

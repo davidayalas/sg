@@ -1,0 +1,64 @@
+{{ $data := .Site.GetPage "page" "general.md" }}
+
+				<footer id="footer">
+					<section>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Nombre</label>
+									<input type="text" name="name" id="name" required="required" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" required="required" />
+								</div>
+								<div class="field">
+									<label for="message">Mensaje</label>
+									<textarea name="message" id="message" rows="3" required="required"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Envia" /></li>
+							</ul>
+						</form>
+					</section>
+					<section class="split contact">
+						<section class="alt">
+							<h3>Dirección</h3>
+							<p>{{ safeHTML $data.Params.address }}</p>
+						</section>
+						<section>
+							<h3>Teléfono</h3>
+							<p><a href="#">{{ $data.Params.phone }}</a></p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">{{ safeHTML $data.Params.email }}</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+			<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				</div>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>

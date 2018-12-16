@@ -1,0 +1,5 @@
+*/_gen/*
+node_modules
+public
+hugo-*
+http-*

@@ -1,0 +1,7 @@
+baseURL = "http://localhost"
+languageCode = "es-ES"
+title = "Sambo Granollers"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"

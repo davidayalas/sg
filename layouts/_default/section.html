@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<!--
+  Introspect by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+--> 
+<html>
+  <head>
+      {{ partial "head.html" . }}
+  </head>
+  <body id="noticies">
+
+      {{ partial "menu.html" . }}
+
+    <!-- Main -->
+      <section id="main" >
+        <div class="inner news">
+        {{ partial "breadcrumbs" . }}
+          <header class="major special">
+            <h1>{{.Section}}</h1>
+          </header>
+
+            {{ if ne .Section "galeria" }}
+              {{ range .Paginator.Pages.ByDate.Reverse }}
+
+                  <article>
+                    {{ if ne .Section "agenda" }}<a href="{{.URL}}">{{end}}
+                      <strong>{{ .Title }}</strong>
+                    {{ if ne .Section "agenda" }}</a>{{end}}
+                    <p>{{ .Date.Format "02-01-2006" }} - {{.Params.lloc}} <br />
+                      {{ .Description }}
+                    </p>
+                  </article>
+
+              {{ end }}
+
+            {{ end }}
+
+            {{ if eq .Section "galeria" }}
+
+              {{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+              {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Section" "galeria") 8}}
+    
+              <div class="box alt"><div class="row 50% uniform">
+                {{ range $paginator.Pages }}
+                    {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
+                    {{ if $image }}
+                    {{ $thumb := $image.Fill "320x320 q90" }}
+
+                    <div class="3u 12u(xsmall)">
+                        <span class="image fit small-font">
+                          <a class="align-center" href="{{.RelPermalink}}">
+                            <img src="{{$thumb.RelPermalink}}" alt="{{.Title}}">
+                          </a>
+                          <p>{{.Title}}</p>
+                        </span>
+                    </div>
+                    {{ end }}
+                {{ end }}
+
+              </div></div>
+            {{ end }}
+
+
+
+              {{ template "_internal/pagination.html" . }}
+
+        </div>
+      </section>
+
+      {{ partial "footer.html" . }}
+
+  </body>
+</html>
