@@ -3095,7 +3095,9 @@ input, select, textarea {
 		padding: 0;
 	}
 
-		.pagination a, .pagination span {
+		.pagination a
+		/*, .pagination span*/
+		{
 			-moz-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 			-webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 			-ms-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -3116,9 +3118,15 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
+		.pagination li.disabled, .pagination li.disabled a span{
+			pointer-events: none;
+			cursor: default;
+			text-decoration: none;
+			color: #ccc;
+		}
+
 		.pagination .next, .pagination .previous {
 			text-decoration: none;
-			padding: 0 1.75rem;
 		}
 
 			.pagination .next:before, .pagination .previous:before {
@@ -3131,19 +3139,16 @@ input, select, textarea {
 			}
 
 			.pagination .next:before, .pagination .previous:before {
-				display: inline-block;
 				color: inherit !important;
 			}
 
 		.pagination .previous:before {
 			content: '\f104';
-			margin-right: 0.9375em;
+			color: #000;
 		}
 
 		.pagination .next:before {
 			content: '\f105';
-			float: right;
-			margin-left: 0.9375em;
 		}
 
 		@media screen and (max-width: 980px) {
@@ -3180,13 +3185,13 @@ input, select, textarea {
 				border-left-color: #18bfef;
 			}
 
-		.pagination a.active {
+		.pagination li.active a, .pagination a.active {
 			background-color: #eeeeee;
 		}
 
-	.pagination span {
+	/*.pagination span {
 		color: #eeeeee;
-	}
+	}*/
 
 /* Wrapper */
 

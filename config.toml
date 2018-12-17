@@ -1,7 +1,36 @@
 baseURL = "http://localhost"
 languageCode = "es-ES"
 title = "Sambo Granollers"
+buildFuture = true
 
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
+
+#----------------
+# MENU PRINCIPAL
+#----------------
+
+[[menu.main]]
+	Name = "Inicio"
+    Weight = 1
+    Identifier = "home"
+    URL = "/"
+
+[[menu.main]]
+	Name = "Galería"
+    Weight = 3
+    Identifier = "galeria"
+    URL = "/galeria"
+
+[[menu.main]]
+	Name = "Agenda"
+    Weight = 5
+    Identifier = "agenda"
+    URL = "/agenda"
+
+[[menu.main]]
+	Name = "Quiénes somos"
+    Weight = 7
+    Identifier = "who"
+    URL = "/who"

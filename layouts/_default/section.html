@@ -1,74 +1,76 @@
 <!DOCTYPE HTML>
 <!--
-  Introspect by TEMPLATED
-  templated.co @templatedco
-  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
---> 
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  <head>
-      {{ partial "head.html" . }}
-  </head>
-  <body id="noticies">
+	<head>
+		{{ $data := .Site.GetPage "page" "general.md" }}
+	    {{ partial "head.html" . }}
+	</head>
+	<body class="is-preload">
 
-      {{ partial "menu.html" . }}
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    <!-- Main -->
-      <section id="main" >
-        <div class="inner news">
-        {{ partial "breadcrumbs" . }}
-          <header class="major special">
-            <h1>{{.Section}}</h1>
-          </header>
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">{{ safeHTML $data.Params.title2 }}</a>
+					</header>
 
-            {{ if ne .Section "galeria" }}
-              {{ range .Paginator.Pages.ByDate.Reverse }}
+				<!-- Nav -->
+                    {{ partial "menu.html" . }}
 
-                  <article>
-                    {{ if ne .Section "agenda" }}<a href="{{.URL}}">{{end}}
-                      <strong>{{ .Title }}</strong>
-                    {{ if ne .Section "agenda" }}</a>{{end}}
-                    <p>{{ .Date.Format "02-01-2006" }} - {{.Params.lloc}} <br />
-                      {{ .Description }}
-                    </p>
-                  </article>
+				<!-- Main -->
+					<div id="main">
 
-              {{ end }}
+						{{ if eq .Section "galeria" }}
+						<section>
+							{{ $picsperpage := 1}}	
+							{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+							{{ $paginator := .Paginate (where .Data.Pages "Section" "galeria") $picsperpage}}
+		
+							{{ if eq $paginator.PageNumber 1 }}
+								{{ range first 1 $paginator.Pages }}
+									{{ if .Params.image }}
+										{{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
+										{{ $thumb := $image.Fill "1194x581 q90" }}
+											<span class="image fit"><a href="{{$image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span>
+									{{ end }}
+								{{ end }}
+							{{ end }}
 
-            {{ end }}
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									{{ range $index, $value := where $.Paginator.Pages "Params.hidden" "ne" "true" }}
+										{{ if or (and (gt $index 0) (eq $paginator.PageNumber 1)) (gt $paginator.PageNumber 1) }}
+											{{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
+											{{ $thumb := $image.Fill "387x236 q90" }}
+										  	<div class="col-4"><span class="image fit"><a href="{{$image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span></div>
+										{{ end }}
+									{{ end }}
+								</div>
+							</div>
+		
+						</section>
+		
+						{{ end }}
 
-            {{ if eq .Section "galeria" }}
+						{{ if eq .Section "noticias" }}
+							{{ range .Paginator.Pages.ByDate.Reverse }}
+								{{ .Title }}
+							{{ end }}
+						{{ end }}
+						<footer>
+							<!-- partial "paginator.html" (dict "paginator" $paginator) -->
+							{{ template "_internal/pagination.html" . }}
+						</footer>
 
-              {{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
-              {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Section" "galeria") 8}}
-    
-              <div class="box alt"><div class="row 50% uniform">
-                {{ range $paginator.Pages }}
-                    {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
-                    {{ if $image }}
-                    {{ $thumb := $image.Fill "320x320 q90" }}
+					</div>
 
-                    <div class="3u 12u(xsmall)">
-                        <span class="image fit small-font">
-                          <a class="align-center" href="{{.RelPermalink}}">
-                            <img src="{{$thumb.RelPermalink}}" alt="{{.Title}}">
-                          </a>
-                          <p>{{.Title}}</p>
-                        </span>
-                    </div>
-                    {{ end }}
-                {{ end }}
+				<!-- Footer -->
+                {{ partial "footer.html" . }}
 
-              </div></div>
-            {{ end }}
-
-
-
-              {{ template "_internal/pagination.html" . }}
-
-        </div>
-      </section>
-
-      {{ partial "footer.html" . }}
-
-  </body>
+	</body>
 </html>

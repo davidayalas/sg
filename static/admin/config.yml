@@ -11,16 +11,6 @@ public_folder: "/media"
 #publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "galeria"
-    label: "Galeria"
-    folder: "content/galeria"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Título", name: "title", widget: string}
-      - {label: "Fecha", name: "date", widget: date}
-      - {label: "Image", name: "image", widget: image}
-
   - name: "general"
     label: "General"
     folder: "content"
@@ -32,10 +22,28 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Título", name: "title", widget: "string", required: true}
       - {label: "Título 2", name: "title2", widget: "string", required: true}
+      - {label: "Título Navegador", name: "title_nav", widget: "string", required: true}
       - {label: "Descripción", name: "description", widget: "string", required: true}
       - {label: "Dirección", name: "address", widget: "string", required: true}
       - {label: "Teléfono", name: "phone", widget: "string", required: true}
       - {label: "Email", name: "email", widget: "string", required: true}
+      - name: social
+        label: Contact
+        widget: list
+        fields:
+          - {label: "Título", name: "title", widget: string}
+          - {label: "Enlace", name: "link", widget: string}
+          - {label: "CSS Class", name: "class", widget: string}
+
+  - name: "galeria"
+    label: "Galeria"
+    folder: "content/galeria"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: string}
+      - {label: "Fecha", name: "date", widget: date}
+      - {label: "Image", name: "image", widget: image}
 
   - name: "news"
     label: "Noticias"

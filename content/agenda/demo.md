@@ -1,10 +1,9 @@
 ---
-title: Sopar 30 aniversari CKM
+title: 'Evento 1'
 description: >-
-  Aquest any 2017 celebrem el 30è aniversari del Club i ho farem amb un sopar el
-  dia 15/12/2017
-date: '2017-12-15'
+  Evento 1 descripción
+date: '2018-12-20'
 hora: '21.30'
-lloc: 'Restaurant el Pedregar, Montmeló'
+lloc: 'Granollers'
 ---
 

@@ -1,67 +1,68 @@
 <!DOCTYPE HTML>
 <!--
-	Introspect by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
---> 
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
+		{{ $data := .Site.GetPage "page" "general.md" }}
 	    {{ partial "head.html" . }}
 	</head>
-	<body class="{{.Section}}">
+	<body class="is-preload">
 
-	    {{ partial "menu.html" . }}
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-		<!-- Main -->
-			<section id="main" >
-				<div class="inner">
-				    {{ partial "breadcrumbs" . }}
-					<header class="major special">
-						<h1>{{.Title}}</h1>
-			            {{ if eq .Section "noticies" }}
-							{{ .Date.Format "02-01-2006" }}
-							<p class="lead">{{.Description}}</p>
-						{{ end }}
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">{{ safeHTML $data.Params.title2 }}</a>
 					</header>
 
-		            {{ if ne .Section "galeria" }}
-							<p class="desc">{{.Content}}</p>
-					{{ end }}
+				<!-- Nav -->
+                    {{ partial "menu.html" . }}
 
-		            {{ if eq .Section "noticies" }}
-		            	{{ if .Params.images }}
-							{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
-		            		{{ range .Params.images }}	
-				              	{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
-				              	{{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
-				              		{{ $.Scratch.Set "resized" ($image.Resize "600x q75") }}
-				              	{{ else if gt $image.Width 400 }}
-				              		{{ $.Scratch.Set "resized" ($image.Resize "400x q75") }}
-				              	{{ else }}
-				              		{{ $.Scratch.Set "resized" $image }}
-				              	{{ end }}
-				              	{{.title}}<br />
-			              		<a href="{{$image.RelPermalink}}"><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="{{.title}}" title="{{.title}}"  /></a><br />
-		            		{{ end }}
-		            	{{ end  }}
-		            {{ end }}
+				<!-- Main -->
+					<div id="main">
 
-		            {{ if eq .Section "galeria" }}
-	                    <span class="image fit small-font ">
-		                    <div class="8u 12u(xsmall)">
-		                      <a class="align-center" href="{{.Params.image}}">
-		                        <img src="{{.Params.image}}" alt="{{.Title}}" class="6u 12u(xsmall)">
-		                      </a>
-		                  	</div>
-							<p>{{.Title}}</p>
-							<p>{{.Description}}</p>
-							<p>{{ .Date.Format "02-01-2006" }}</p>
-	                    </span>
-					{{ end }}
-				</div>
-			</section>
+						<section class="post">
+							<header class="major">
+								<h1>{{.Title}}</h1>
+								<p>{{.Description}}</p>
+							</header>
 
-	    {{ partial "footer.html" . }}
+							{{ if .Params.images }}
+								{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+			            		{{ range first 1 .Params.images }}	
+									{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
+									{{ $thumb := $image.Fill "1194x581 q90" }}
+									  <div class="image main"><a href="{{ $image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></div>
+	   							    {{ end }}
+							{{ end }}
+
+							{{.Content}}
+
+							{{ if .Params.images }}
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+								{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+								{{ range $index, $value := .Params.images }}	
+									{{ if (gt $index 0) }}
+										{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
+										{{ $thumb := $image.Fill "387x236 q90" }}
+									  	<div class="col-4"><span class="image fit"><a href="{{$image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span></div>
+								    {{ end }}
+								{{ end }}
+										</div>
+							</div>
+							{{ end }}
+
+						</section>
+
+					</div>
+
+				<!-- Footer -->
+                {{ partial "footer.html" . }}
 
 	</body>
 </html>
