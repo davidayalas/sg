@@ -3,7 +3,12 @@
 				<nav id="nav">
 					<ul class="links">
 						{{ range .Site.Menus.main }}
-						<li><a href="{{.URL}}">{{ .Name }}</a></li>
+							{{ if or (and $.IsHome (eq "home" .Identifier)) (eq $.Section .Identifier) (eq $.File.BaseFileName .Identifier) }}
+								<li class="active">
+							{{ else }}
+								<li>
+							{{ end }}
+							<a href="{{.URL}}">{{ .Name }}</a></li>
 						{{end}}
 					</ul>
 					<ul class="icons">
