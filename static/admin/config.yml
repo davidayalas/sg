@@ -50,7 +50,7 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: "news"
     label: "Noticias"
-    folder: "content/news"
+    folder: "content/noticias"
     sort: "date:desc"
     create: true
     slug: "{{slug}}"
