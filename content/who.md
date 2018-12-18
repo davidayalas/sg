@@ -1,6 +1,7 @@
 ---
 title: "Quiénes somos"
 description: ""
+type: "orphan"
 image: null
 ---
 

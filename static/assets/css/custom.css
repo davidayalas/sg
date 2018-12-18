@@ -1,0 +1,28 @@
+ul.cms{
+}
+
+ul.cms li{
+	display: inline-block!important;
+	padding: 0 0.75em;
+	font-size: .8em;	
+	background-color: #333!important;
+	color: #fff;
+	border-radius: 0.25em;	
+}
+
+ul.cms a {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 0.8rem;
+    display: inline-block;
+	text-align: center;
+	border: 0;
+	color: #fff;
+}
+
+.hidden{
+	display: none;
+}
+
+.visible{
+	display: block;
+}

@@ -9,4 +9,12 @@
         }
     }
 
+    if(window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if(netlifyIdentity.currentUser()){
+              $("#footer .cms").css("display","block");
+          }
+        });
+    }  
+
 })(jQuery);

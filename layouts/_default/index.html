@@ -16,7 +16,7 @@
 
 				<!-- Intro -->
 					<div id="intro">
-						<h1>{{ safeHTML $data.Title }}</h1>
+						<h1>{{ safeHTML (replace $data.Title " " "<br />") }}</h1>
 						<p>{{ $data.Description }}</p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
@@ -33,8 +33,13 @@
 
 				<!-- Main -->
 					<div id="main">
+						{{ $paginator := .Paginate (where .Data.Pages "Section" "noticias") $data.Params.pagination }}
 
-						{{ range first 1 (where .Data.Pages "Section" "noticias") }}
+						{{ if (eq $paginator.PageNumber 1) }}
+
+						{{ range first 1 $paginator.Pages }}
+
+						<!-- range first 1 (where .Data.Pages "Section" "noticias") -->
 						<!-- Featured Post -->
 						<article class="post featured">
 							<header class="major">
@@ -63,10 +68,15 @@
 
 						{{ end }}
 
+						{{ end }}
+
 						<!-- Posts -->
 							<section class="posts">
-								{{ range $index, $value := where .Data.Pages "Section" "noticias" }}
-									{{ if (gt $index 0) }}
+								<!-- range $index, $value := where .Data.Pages "Section" "noticias" -->
+								
+								{{ range $index, $value := $paginator.Pages }}
+									{{ if or (and (gt $index 0) (eq $paginator.PageNumber 1)) (gt $paginator.PageNumber 1) }}
+
 									<article>
 										<header>
 											<span class="date">{{ .Date.Format "02-01-2006" }}</span>
@@ -96,14 +106,13 @@
 									</article>	
 									{{ end }}
 								{{ end }}
-		
+								
 							</section>
 
 						<!-- Footer -->
 							<footer>
-
+								{{ template "_internal/pagination.html" . }}
 							</footer>
-
 					</div>
 
 			<!-- Footer -->

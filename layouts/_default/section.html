@@ -27,9 +27,8 @@
 
 						{{ if eq .Section "galeria" }}
 						<section>
-							{{ $picsperpage := 1}}	
 							{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
-							{{ $paginator := .Paginate (where .Data.Pages "Section" "galeria") $picsperpage}}
+							{{ $paginator := .Paginate (where .Data.Pages "Section" "galeria") $data.Params.pagination}}
 		
 							{{ if eq $paginator.PageNumber 1 }}
 								{{ range first 1 $paginator.Pages }}

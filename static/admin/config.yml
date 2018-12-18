@@ -34,12 +34,15 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Título", name: "title", widget: string}
           - {label: "Enlace", name: "link", widget: string}
           - {label: "CSS Class", name: "class", widget: string}
+      - {label: "Paginación", name: "pagination", widget: "number", required: true, default: 5}
 
   - name: "galeria"
     label: "Galeria"
     folder: "content/galeria"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor: 
+      preview: false     
     fields:
       - {label: "Título", name: "title", widget: string}
       - {label: "Fecha", name: "date", widget: date}
@@ -79,3 +82,17 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Hora", name: "hora", widget: "string"}
       - {label: "Lugar", name: "lloc", widget: "string"}
+
+  - name: "others"
+    label: "Otros"
+    folder: "content"
+    sort: "date:desc"
+    create: true
+    slug: "{{slug}}"
+    editor: 
+      preview: false     
+    filter: {field: "type", value: "orphan"}
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "string"}
+      - {label: "Contenido", name: "body", widget: "markdown"}

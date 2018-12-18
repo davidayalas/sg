@@ -12,20 +12,20 @@ publishdir = "public"
 #----------------
 
 [[menu.main]]
-	Name = "Inicio"
+	Name = "Noticias"
     Weight = 1
     Identifier = "home"
     URL = "/"
 
 [[menu.main]]
 	Name = "Galería"
-    Weight = 3
+    Weight = 5
     Identifier = "galeria"
     URL = "/galeria"
 
 [[menu.main]]
 	Name = "Agenda"
-    Weight = 5
+    Weight = 3
     Identifier = "agenda"
     URL = "/agenda"
 

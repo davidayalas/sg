@@ -1,7 +1,6 @@
 ---
-title: "Club<br />Sambo<br />Granollers"
-title2: "Sambo<br />Granollers"
-title_nav: "Club Sambo Granollers"
+title: "Club Sambo Granollers"
+title2: "Sambo Granollers"
 description: ""
 image: null
 address: "Carrer del Camp de les Moreres, s/n, 08401 Granollers, Barcelona"
@@ -17,4 +16,5 @@ social:
   - class: fa-instagram
     link: 'https://www.instagram.com/sambogranollers'
     title: Instagram
+pagination: 5
 ---

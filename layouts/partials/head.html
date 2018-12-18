@@ -1,9 +1,10 @@
 {{ $data := .Site.GetPage "page" "general.md" }}
 
-	<title>{{ $data.Params.title_nav }}</title>
+	<title>{{ $data.Title }}</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/custom.css" />
 	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
