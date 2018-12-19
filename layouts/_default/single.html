@@ -24,38 +24,80 @@
 
 				<!-- Main -->
 					<div id="main">
-
 						<section class="post">
+							<a href="#" onclick="window.history.go(-1)" class="icon fa-arrow-left">&nbsp;</a>
+
+							{{ $.Scratch.Set "processed" "false" }}
+
+							{{ if eq .Section "noticias"}}
+
+								{{ $.Scratch.Set "processed" "true" }}
+								<header class="major">
+									<h1>{{.Title}}</h1>
+									<p>{{.Description}}</p>
+								</header>
+
+								{{ if .Params.images }}
+									{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+									{{ range first 1 .Params.images }}	
+										{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
+										{{ $thumb := $image.Fill "1194x581 q90" }}
+										<div class="image main"><a href="{{ $image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></div>
+										{{ end }}
+								{{ end }}
+
+								{{.Content}}
+
+								{{ if .Params.images }}
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+									{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+									{{ range $index, $value := .Params.images }}	
+										{{ if (gt $index 0) }}
+											{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
+											{{ $thumb := $image.Fill "387x236 q90" }}
+											<div class="col-4 col-12-small"><span class="image fit"><a href="{{$image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span></div>
+										{{ end }}
+									{{ end }}
+											</div>
+								</div>
+								{{ end }}
+							{{ end }}
+
+							{{ if eq .Section "agenda"}}
+								{{ $.Scratch.Set "processed" "true" }}
+
+								<header class="major">
+									<h1>{{.Title}}</h1>
+									<h3>{{ .Date.Format "02-01-2006" }} | {{ .Params.Hora}} | {{ .Params.Lloc}}</h3>
+									<p>{{.Description}}</p>
+								</header>
+
+								{{.Content}}
+
+							{{ end }}
+							
+							{{ if eq .Section "galeria"}}
+								{{ $.Scratch.Set "processed" "true" }}
+								{{ if .Params.image }}
+									{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+										{{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
+										{{ $thumb := $image.Fill "1194x581 q90" }}
+										<h2>{{.Title}}</h2>
+										<div class="image main"><a href="{{ $image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></div>
+								{{ end }}
+							{{ end }}
+
+							{{ if eq ($.Scratch.Get "processed") "false" }}
+							
 							<header class="major">
 								<h1>{{.Title}}</h1>
 								<p>{{.Description}}</p>
 							</header>
 
-							{{ if .Params.images }}
-								{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
-			            		{{ range first 1 .Params.images }}	
-									{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
-									{{ $thumb := $image.Fill "1194x581 q90" }}
-									  <div class="image main"><a href="{{ $image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></div>
-	   							    {{ end }}
-							{{ end }}
-
 							{{.Content}}
 
-							{{ if .Params.images }}
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-								{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
-								{{ range $index, $value := .Params.images }}	
-									{{ if (gt $index 0) }}
-										{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
-										{{ $thumb := $image.Fill "387x236 q90" }}
-									  	<div class="col-4"><span class="image fit"><a href="{{$image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span></div>
-								    {{ end }}
-								{{ end }}
-										</div>
-							</div>
-							{{ end }}
+						{{ end }}
 
 						</section>
 

@@ -82,12 +82,14 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Hora", name: "hora", widget: "string"}
       - {label: "Lugar", name: "lloc", widget: "string"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
 
   - name: "others"
     label: "Otros"
     folder: "content"
     sort: "date:desc"
-    create: true
+    create: false
+    delete: false
     slug: "{{slug}}"
     editor: 
       preview: false     

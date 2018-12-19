@@ -51,13 +51,18 @@
 					<ul><li>&copy; CSG</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 				</div>
 
+				<ul id="cms" class="cms hidden">
+						{{ if ne .File.BaseFileName "" }}
+						<li><a target="_blank" href="/admin/#/collections/{{.Section}}/entries/{{.File.BaseFileName}}">Edita esta página</a></li>
+						{{ end }}
+						<li><a target="_blank" href="/admin/#/collections/news/new">Añade una noticia</a></li>
+						<li><a target="_blank" href="/admin/#/collections/agenda/new">Añade un evento</a></li>
+						<li><a target="_blank" href="/admin/#/collections/galeria/new">Añade una imagen</a></li>
+						<li><a target="_blank" href="/admin/#/collections/general/entries/general">Edita info general</a></li>
+				</ul>
 		</div>
 
-		<ul id="cms" class="cms hidden">
-			<li><a target="_blank" href="/admin/#/collections/home/entries/home">Edita esta página</a></li>
-			<li><a target="_blank" href="/admin/#/collections/news/new">Añade una noticia</a></li>
-			<li><a target="_blank" href="/admin/#/collections/galeria/new">Añade una imagen</a></li>
-		</ul>
+
  
 	<!-- Scripts -->
 		<script src="/assets/js/jquery.min.js"></script>

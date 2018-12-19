@@ -1,9 +1,9 @@
 {{ $data := .Site.GetPage "page" "general.md" }}
 
 				<nav id="nav">
-					<ul class="links">
+						<ul class="links">
 						{{ range .Site.Menus.main }}
-							{{ if or (and $.IsHome (eq "home" .Identifier)) (eq $.Section .Identifier) (eq $.File.BaseFileName .Identifier) }}
+							{{ if or (and $.IsHome (eq "home" .Identifier)) (and (eq "home" .Identifier) (eq $.Section "noticias")) (eq $.Section .Identifier) (eq $.File.BaseFileName .Identifier) }}
 								<li class="active">
 							{{ else }}
 								<li>

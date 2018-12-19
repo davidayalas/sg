@@ -16,5 +16,5 @@ social:
   - class: fa-instagram
     link: 'https://www.instagram.com/sambogranollers'
     title: Instagram
-pagination: 5
+pagination: 1
 ---

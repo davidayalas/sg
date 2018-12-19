@@ -10,7 +10,7 @@
 	    {{ partial "head.html" . }}
 	</head>
 	<body class="is-preload">
-
+		
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
@@ -93,10 +93,10 @@
 												{{ else }}
 													{{ $.Scratch.Set "resized" $image }}
 												{{ end }}
-												<a href="{{$image.RelPermalink}}" class="image main"><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></a>
+												<span class="image main"></a><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></span>
 											{{ end }}
 										{{ else }}
-											<a href="/assets/img/sambo_597.png" class="image main"><img src="/assets/img/sambo_597.png" alt="" /></a>
+											<span class="image main"><img src="/assets/img/sambo_597.png" alt="" /></span>
 										{{ end }}
 
 										<p>{{ .Description }}</p>
