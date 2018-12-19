@@ -1,6 +1,7 @@
 ---
 title: "Club Sambo Granollers"
 title2: "Sambo Granollers"
+type: "general"
 description: ""
 image: null
 address: "Carrer del Camp de les Moreres, s/n, 08401 Granollers, Barcelona"
