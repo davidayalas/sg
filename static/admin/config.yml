@@ -48,7 +48,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Fecha", name: "date", widget: date}
       - {label: "Image", name: "image", widget: image}
 
-  - name: "news"
+  - name: "noticias"
     label: "Noticias"
     folder: "content/noticias"
     sort: "date:desc"
