@@ -1,0 +1,5 @@
+{{ $data := .Site.GetPage "page" "general.md" }}
+
+    <header id="header">
+        <a href="/" class="logo">{{ safeHTML $data.Params.title2 }}</a>
+    </header>

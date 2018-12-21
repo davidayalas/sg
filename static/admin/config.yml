@@ -23,8 +23,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Título", name: "title", widget: "string", required: true}
       - {label: "Título 2", name: "title2", widget: "string", required: true}
-      - {label: "Título Navegador", name: "title_nav", widget: "string", required: true}
-      - {label: "Descripción", name: "description", widget: "string", required: true}
+      - {label: "Horarios", name: "schedule", widget: "string", required: true}
       - {label: "Dirección", name: "address", widget: "string", required: true}
       - {label: "Teléfono", name: "phone", widget: "string", required: true}
       - {label: "Email", name: "email", widget: "string", required: true}

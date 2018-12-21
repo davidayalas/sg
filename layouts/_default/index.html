@@ -7,6 +7,8 @@
 <html>
 	<head>
 		{{ $data := .Site.GetPage "page" "general.md" }}
+		{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+
 	    {{ partial "head.html" . }}
 	</head>
 	<body class="is-preload">
@@ -25,7 +27,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">{{ safeHTML $data.Params.title2 }}</a>
+						<a href="/" class="logo">{{ safeHTML $data.Params.title2 }}</a>
 					</header>
 
 				<!-- Nav -->
@@ -33,7 +35,7 @@
 
 				<!-- Main -->
 					<div id="main">
-						{{ $paginator := .Paginate (where .Data.Pages "Section" "noticias") $data.Params.pagination }}
+						{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Type" "!=" "page") $data.Params.pagination }}
 
 						{{ if (eq $paginator.PageNumber 1) }}
 
@@ -48,7 +50,6 @@
 								<p>{{.Description}}</p>
 							</header>
 							{{ if .Params.images }}
-								{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
 			            		{{ range first 1 .Params.images }}	
 									{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
 									{{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
@@ -60,6 +61,16 @@
 									{{ end }}
 									<a href="{{$image.RelPermalink}}" class="image main"><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></a>
 								{{ end }}
+							{{ else if .Params.image }}
+								{{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
+								{{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
+									{{ $.Scratch.Set "resized" ($image.Fill "896x436 q75") }}
+								{{ else if gt $image.Width 400 }}
+									{{ $.Scratch.Set "resized" ($image.Fill "597x364 q75") }}
+								{{ else }}
+									{{ $.Scratch.Set "resized" $image }}
+								{{ end }}
+								<span class="image main"></a><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></span>
 							{{ end }}
 							<ul class="actions special">
 								<li><a href="{{.URL}}" class="button large">Leer más</a></li>
@@ -74,16 +85,15 @@
 							<section class="posts">
 								<!-- range $index, $value := where .Data.Pages "Section" "noticias" -->
 								
-								{{ range $index, $value := $paginator.Pages }}
+								{{ range $index, $value := $paginator.Pages}}
 									{{ if or (and (gt $index 0) (eq $paginator.PageNumber 1)) (gt $paginator.PageNumber 1) }}
-
+										
 									<article>
 										<header>
 											<span class="date">{{ .Date.Format "02-01-2006" }}</span>
 											<h2><a href="{{.URL}}">{{.Title}}</a></h2>
 										</header>
 										{{ if .Params.images }}
-										{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
 											{{ range first 1 .Params.images }}	
 												{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
 												{{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
@@ -95,6 +105,16 @@
 												{{ end }}
 												<span class="image main"></a><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></span>
 											{{ end }}
+										{{ else if .Params.image }}
+											{{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
+											{{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
+												{{ $.Scratch.Set "resized" ($image.Fill "896x436 q75") }}
+											{{ else if gt $image.Width 400 }}
+												{{ $.Scratch.Set "resized" ($image.Fill "597x364 q75") }}
+											{{ else }}
+												{{ $.Scratch.Set "resized" $image }}
+											{{ end }}
+											<span class="image main"></a><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></span>
 										{{ else }}
 											<span class="image main"><img src="/assets/img/sambo_597.png" alt="" /></span>
 										{{ end }}

@@ -18,6 +18,12 @@ publishdir = "public"
     URL = "/"
 
 [[menu.main]]
+	Name = "Noticias"
+    Weight = 3
+    Identifier = "noticias"
+    URL = "/noticias"
+
+[[menu.main]]
 	Name = "Galería"
     Weight = 5
     Identifier = "galeria"
@@ -25,12 +31,12 @@ publishdir = "public"
 
 [[menu.main]]
 	Name = "Agenda"
-    Weight = 3
+    Weight = 7
     Identifier = "agenda"
     URL = "/agenda"
 
 [[menu.main]]
 	Name = "Quiénes somos"
-    Weight = 7
+    Weight = 9
     Identifier = "who"
     URL = "/who"

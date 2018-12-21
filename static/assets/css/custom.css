@@ -27,3 +27,22 @@ ul.cms a {
 	display: block;
 }
 
+#footer > section.split > section,
+#footer > section.split > section:first-child,
+#footer > section.split > section:last-child  {
+	padding: 2.4rem 4rem 2.1rem 4rem !important;
+}
+
+@media screen and (max-width: 480px) {
+
+	.pagination .page-item{
+		display:none;
+	}
+
+	.pagination .page-item:nth-child(1), .pagination .page-item:nth-child(2),
+	.pagination .page-item:nth-last-child(1), .pagination .page-item:nth-last-child(2) {
+		display: block;
+	  }
+
+}
+

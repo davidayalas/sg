@@ -15,55 +15,23 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">{{ safeHTML $data.Params.title2 }}</a>
-					</header>
+					{{ partial "header.html" . }}
 
 				<!-- Nav -->
                     {{ partial "menu.html" . }}
 
 				<!-- Main -->
 					<div id="main">
-						{{ if eq .Section "galeria" }}
-						<section>
-							{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
-							{{ $paginator := .Paginate (where .Data.Pages "Section" "galeria") $data.Params.pagination}}
-		
-							{{ if eq $paginator.PageNumber 1 }}
-								{{ range first 1 $paginator.Pages.ByDate.Reverse }}
-									{{ if .Params.image }}
-										{{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
-										{{ $thumb := $image.Fill "1194x581 q90" }}
-											<span class="image fit"><a href="{{.URL}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span>
-									{{ end }}
-								{{ end }}
-							{{ end }}
+						{{ if eq .Section "noticias" }}
+							{{ partial "noticias.html" . }}
+						{{ end }}
 
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									{{ range $index, $value := where $.Paginator.Pages.ByDate.Reverse "Params.hidden" "ne" "true" }}
-										{{ if or (and (gt $index 0) (eq $paginator.PageNumber 1)) (gt $paginator.PageNumber 1) }}
-											{{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
-											{{ $thumb := $image.Fill "387x236 q90" }}
-										  	<div class="col-4 col-12-small"><span class="image fit"><a href="{{.URL}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span></div>
-										{{ end }}
-									{{ end }}
-								</div>
-							</div>
-		
-						</section>
-		
+						{{ if eq .Section "galeria" }}
+							{{ partial "galeria.html" . }}		
 						{{ end }}
 
 						{{ if eq .Section "agenda" }}
-							{{ $paginator := .Paginate (where .Data.Pages "Section" "agenda") $data.Params.pagination}}
-							{{ range $paginator.Pages }}
-								<header>
-									<h2><a href="{{.URL}}">{{ .Title }}</a></h2>
-									<h3>{{ .Date.Format "02-01-2006" }} | {{ .Params.Hora}} | {{ .Params.Lloc}}</h3>
-									<p>{{ .Description }}</p>
-								</header>								
-							{{ end }}
+							{{ partial "agenda.html" . }}
 						{{ end }}
 						<footer>
 							<!-- partial "paginator.html" (dict "paginator" $paginator) -->

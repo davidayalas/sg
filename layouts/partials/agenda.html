@@ -1,0 +1,10 @@
+{{ $data := .Site.GetPage "page" "general.md" }}
+
+{{ $paginator := .Paginate (where .Data.Pages "Section" "agenda") $data.Params.pagination}}
+{{ range $paginator.Pages }}
+    <header>
+        <h2><a href="{{.URL}}">{{ .Title }}</a></h2>
+        <h3>{{ .Date.Format "02-01-2006" }} | {{ .Params.Hora}} | {{ .Params.Lloc}}</h3>
+        <p>{{ .Description }}</p>
+    </header>								
+{{ end }}
