@@ -33,7 +33,7 @@ ul.cms a {
 	padding: 2.4rem 4rem 2.1rem 4rem !important;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (orientation: portrait) {
 
 	.pagination .page-item{
 		display:none;
