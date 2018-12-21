@@ -1,11 +1,8 @@
 ---
-title: "Quiénes somos"
-description: ""
-type: "orphan"
-image: null
+title: Quiénes somos
+description: Lorem ipsum dolor sit amet
 ---
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu purus a velit gravida aliquam. Curabitur pharetra turpis a sem varius, non feugiat nisi tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut massa elit, placerat et enim in, fermentum interdum turpis. Donec vitae felis ut ligula scelerisque ultrices. Phasellus dolor justo, interdum vitae tincidunt id, finibus a neque. Fusce cursus neque odio, a hendrerit sem ullamcorper ac. Aliquam blandit felis augue, in tincidunt lacus sollicitudin sit amet. Ut ante sapien, dignissim a dui in, rhoncus fringilla lacus. Vivamus vestibulum justo et venenatis vestibulum. Duis non volutpat nibh.
+..., consectetur adipiscing elit. Maecenas eu purus a velit gravida aliquam. Curabitur pharetra turpis a sem varius, non feugiat nisi tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut massa elit, placerat et enim in, fermentum interdum turpis. Donec vitae felis ut ligula scelerisque ultrices. Phasellus dolor justo, interdum vitae tincidunt id, finibus a neque. Fusce cursus neque odio, a hendrerit sem ullamcorper ac. Aliquam blandit felis augue, in tincidunt lacus sollicitudin sit amet. Ut ante sapien, dignissim a dui in, rhoncus fringilla lacus. Vivamus vestibulum justo et venenatis vestibulum. Duis non volutpat nibh.
 
 Sed orci magna, iaculis id nunc non, condimentum cursus purus. Maecenas rhoncus urna a quam placerat pharetra. Sed suscipit purus mattis dapibus accumsan. Nulla non ornare justo. Ut ultricies turpis eu dui pellentesque, vitae tempor nibh ornare. Duis tempus hendrerit neque, et tincidunt orci tincidunt ut. Praesent viverra diam felis, condimentum hendrerit mi vehicula sit amet. Aliquam eu sapien cursus, malesuada lacus et, iaculis nisi. Donec et quam quis quam interdum accumsan eget sit amet mauris. Donec in enim sagittis, dapibus massa ut, volutpat neque. Fusce mollis ante vitae tortor scelerisque, a sagittis dolor varius. Aliquam eu volutpat justo, quis malesuada erat. Fusce consequat neque arcu, vel consequat arcu vulputate sed.
 
