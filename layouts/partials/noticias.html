@@ -1,6 +1,10 @@
 {{ $data := .Site.GetPage "page" "general.md" }}
 
-{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Section" "noticias" ) $data.Params.pagination }}
+{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Type" "!=" "page") $data.Params.pagination }}
+
+{{ if eq .Section "noticias "}}
+    {{ $paginator = .Paginate (where .Data.Pages.ByDate.Reverse ".Section" "noticias" ) $data.Params.pagination }}
+{{ end }}
 
 {{ if (eq $paginator.PageNumber 1) }}
 
@@ -10,7 +14,7 @@
 <!-- Featured Post -->
 <article class="post featured">
     <header class="major">
-        <span class="date">{{ .Date.Format "02-01-2006" }}</span>
+        <span class="date">{{ .Date.Format "02-01-2006" }} </span>
         <h2><a href="{{.URL}}">{{ .Title }}</a></h2>
         <p>{{.Description}}</p>
     </header>
@@ -29,7 +33,7 @@
         {{ end }}
     {{ end }}
     <ul class="actions special">
-        <li><a href="{{.URL}}" class="button large">Leer más</a></li>
+        <li><a href="{{.URL}}" class="button large">Ver más</a></li>
     </ul>
 </article>
 
@@ -68,7 +72,7 @@
 
                 <p>{{ .Description }}</p>
                 <ul class="actions special">
-                    <li><a href="{{.URL}}" class="button">Leer más</a></li>
+                    <li><a href="{{.URL}}" class="button">Ver más</a></li>
                 </ul>
             </article>	
             {{ end }}
