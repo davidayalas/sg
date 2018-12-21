@@ -1,4 +1,5 @@
 {{ $data := .Site.GetPage "page" "general.md" }}
+{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
 
 {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Type" "!=" "page") $data.Params.pagination }}
 
@@ -19,7 +20,6 @@
         <p>{{.Description}}</p>
     </header>
     {{ if .Params.images }}
-        {{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
         {{ range first 1 .Params.images }}	
             {{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
             {{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
@@ -31,6 +31,16 @@
             {{ end }}
             <a href="{{$image.RelPermalink}}" class="image main"><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></a>
         {{ end }}
+    {{ else if .Params.image }}
+        {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
+        {{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
+            {{ $.Scratch.Set "resized" ($image.Fill "896x436 q75") }}
+        {{ else if gt $image.Width 400 }}
+            {{ $.Scratch.Set "resized" ($image.Fill "597x364 q75") }}
+        {{ else }}
+            {{ $.Scratch.Set "resized" $image }}
+        {{ end }}
+        <span class="image main"></a><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></span>
     {{ end }}
     <ul class="actions special">
         <li><a href="{{.URL}}" class="button large">Ver más</a></li>
@@ -54,7 +64,6 @@
                     <h2><a href="{{.URL}}">{{.Title}}</a></h2>
                 </header>
                 {{ if .Params.images }}
-                {{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
                     {{ range first 1 .Params.images }}	
                         {{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
                         {{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
@@ -66,6 +75,16 @@
                         {{ end }}
                         <span class="image main"></a><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></span>
                     {{ end }}
+                {{ else if .Params.image }}
+                    {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
+                    {{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
+                        {{ $.Scratch.Set "resized" ($image.Fill "896x436 q75") }}
+                    {{ else if gt $image.Width 400 }}
+                        {{ $.Scratch.Set "resized" ($image.Fill "597x364 q75") }}
+                    {{ else }}
+                        {{ $.Scratch.Set "resized" $image }}
+                    {{ end }}
+                    <span class="image main"></a><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></span>
                 {{ else }}
                     <span class="image main"><img src="/assets/img/sambo_597.png" alt="" /></span>
                 {{ end }}
