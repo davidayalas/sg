@@ -12,7 +12,7 @@ publishdir = "public"
 #----------------
 
 [[menu.main]]
-	Name = "Noticias"
+	Name = "Inicio"
     Weight = 1
     Identifier = "home"
     URL = "/"
