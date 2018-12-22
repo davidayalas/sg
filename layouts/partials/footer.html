@@ -2,7 +2,7 @@
 
 				<footer id="footer">
 					<section id="contact">
-						<form method="post" action="#">
+						<form name="contact" data-netlify="true" method="post">
 							<div class="fields">
 								<div class="field">
 									<label for="name">Nombre</label>
@@ -16,6 +16,7 @@
 									<label for="message">Mensaje</label>
 									<textarea name="message" id="message" rows="3" required="required"></textarea>
 								</div>
+								<div data-netlify-recaptcha="true"></div>
 							</div>
 							<ul class="actions">
 								<li><input type="submit" value="Envia" /></li>
