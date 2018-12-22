@@ -59,7 +59,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Descripción", name: "description", widget: "string"}
-      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Contenido", name: "body", widget: "markdown"}
       - name: images
         label: Imágenes

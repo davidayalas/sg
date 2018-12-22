@@ -1,0 +1,45 @@
+{{ $mediaPage := .c.Site.GetPage "page" "media/index.md"}}
+
+{{ $scratch := newScratch }}
+
+{{ $images := .images }}
+{{ $image := .image }}
+{{ $link := .link }}
+{{ $css := .css }}
+{{ $height := .height }}
+{{ $width := .width }}
+{{ $quality := .quality }}
+
+{{ if $images }}
+    {{ range first 1 $images }}	
+        {{ $img := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
+        {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
+            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
+        {{ else if gt $img.Width $height }}
+            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
+        {{ else }}
+            {{ $scratch.Set "resized" $img }}
+        {{ end }}
+
+        {{ if $link }}
+        <a href="{{$img.RelPermalink}}" class="{{$css}}">
+        {{ end }}
+            <img src="{{ ($scratch.Get "resized").RelPermalink}}" alt="" />
+        {{ if $link }}
+        </a>
+        {{ end }}
+    {{ end }}
+{{ else if $image }}
+    {{ $img := $mediaPage.Resources.GetMatch (replace $image "/media/" "") }}            
+    {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
+        {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q75")) }}
+    {{ else if gt $img.Width $height }}
+        {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q75")) }}
+    {{ else }}
+        {{ $scratch.Set "resized" $img }}
+    {{ end }}
+    <span class="image main"></a><img src="{{ ( $scratch.Get "resized").RelPermalink}}" alt="" /></span>
+
+{{ else }}
+    <span class="image main"><img src="/assets/img/sambo_597.png" alt="" /></span>
+{{ end }}

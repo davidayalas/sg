@@ -9,45 +9,25 @@
 
 {{ if (eq $paginator.PageNumber 1) }}
 
-{{ range first 1 $paginator.Pages }}
+    {{ range first 1 $paginator.Pages }}
 
-<!-- range first 1 (where .Data.Pages "Section" "noticias") -->
-<!-- Featured Post -->
-<article class="post featured">
-    <header class="major">
-        <span class="date">{{ .Date.Format "02-01-2006" }} </span>
-        <h2><a href="{{.URL}}">{{ .Title }}</a></h2>
-        <p>{{.Description}}</p>
-    </header>
-    {{ if .Params.images }}
-        {{ range first 1 .Params.images }}	
-            {{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
-            {{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
-                {{ $.Scratch.Set "resized" ($image.Fill "896x436 q75") }}
-            {{ else if gt $image.Width 400 }}
-                {{ $.Scratch.Set "resized" ($image.Resize "400x q75") }}
-            {{ else }}
-                {{ $.Scratch.Set "resized" $image }}
-            {{ end }}
-            <a href="{{$image.RelPermalink}}" class="image main"><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></a>
-        {{ end }}
-    {{ else if .Params.image }}
-        {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
-        {{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
-            {{ $.Scratch.Set "resized" ($image.Fill "896x436 q75") }}
-        {{ else if gt $image.Width 400 }}
-            {{ $.Scratch.Set "resized" ($image.Fill "597x364 q75") }}
-        {{ else }}
-            {{ $.Scratch.Set "resized" $image }}
-        {{ end }}
-        <span class="image main"></a><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></span>
+    <!-- range first 1 (where .Data.Pages "Section" "noticias") -->
+    <!-- Featured Post -->
+    <article class="post featured">
+        <header class="major">
+            <span class="date">{{ .Date.Format "02-01-2006" }} </span>
+            <h2><a href="{{.URL}}">{{ .Title }}</a></h2>
+            <p>{{.Description}}</p>
+        </header>
+
+        {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "link" true "css" "image main" "width" 1194 "height" 581 "quality" 75) }}
+
+        <ul class="actions special">
+            <li><a href="{{.URL}}" class="button large">Ver más</a></li>
+        </ul>
+    </article>
+
     {{ end }}
-    <ul class="actions special">
-        <li><a href="{{.URL}}" class="button large">Ver más</a></li>
-    </ul>
-</article>
-
-{{ end }}
 
 {{ end }}
 
@@ -63,31 +43,8 @@
                     <span class="date">{{ .Date.Format "02-01-2006" }}</span>
                     <h2><a href="{{.URL}}">{{.Title}}</a></h2>
                 </header>
-                {{ if .Params.images }}
-                    {{ range first 1 .Params.images }}	
-                        {{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
-                        {{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
-                            {{ $.Scratch.Set "resized" ($image.Fill "896x436 q75") }}
-                        {{ else if gt $image.Width 400 }}
-                            {{ $.Scratch.Set "resized" ($image.Fill "597x364 q75") }}
-                        {{ else }}
-                            {{ $.Scratch.Set "resized" $image }}
-                        {{ end }}
-                        <span class="image main"></a><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></span>
-                    {{ end }}
-                {{ else if .Params.image }}
-                    {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
-                    {{ if and (gt $image.Width $image.Height) (gt $image.Width 600) }}
-                        {{ $.Scratch.Set "resized" ($image.Fill "896x436 q75") }}
-                    {{ else if gt $image.Width 400 }}
-                        {{ $.Scratch.Set "resized" ($image.Fill "597x364 q75") }}
-                    {{ else }}
-                        {{ $.Scratch.Set "resized" $image }}
-                    {{ end }}
-                    <span class="image main"></a><img src="{{ ($.Scratch.Get "resized").RelPermalink}}" alt="" /></span>
-                {{ else }}
-                    <span class="image main"><img src="/assets/img/sambo_597.png" alt="" /></span>
-                {{ end }}
+
+                {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "link" false "css" "image main" "width" 448 "height" 272 "quality" 75) }}
 
                 <p>{{ .Description }}</p>
                 <ul class="actions special">

@@ -15,14 +15,13 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+				<div id="logo" class="fade-in"></div>
 
 				<!-- Header -->
-					<header id="header">
-						<a href="/" class="logo">{{ safeHTML $data.Params.title2 }}</a>
-					</header>
+					{{ partial "header.html" . }}
 
 				<!-- Nav -->
-                    {{ partial "menu.html" . }}
+              	  {{ partial "menu.html" . }}
 
 				<!-- Main -->
 					<div id="main">
@@ -39,13 +38,7 @@
 									<p>{{.Description}}</p>
 								</header>
 
-								{{ if .Params.images }}
-									{{ range first 1 .Params.images }}	
-										{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
-										{{ $thumb := $image.Fill "1194x581 q90" }}
-										<div class="image main"><a href="{{ $image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></div>
-										{{ end }}
-								{{ end }}
+								{{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
 
 								{{.Content}}
 
@@ -59,7 +52,7 @@
 											<div class="col-4 col-12-small"><span class="image fit"><a href="{{$image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span></div>
 										{{ end }}
 									{{ end }}
-											</div>
+									</div>
 								</div>
 								{{ end }}
 							{{ end }}
