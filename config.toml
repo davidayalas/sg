@@ -45,3 +45,9 @@ anchor = "Center"
     Weight = 9
     Identifier = "who"
     URL = "/who"
+
+[[menu.main]]
+	Name = "Contacto"
+    Weight = 11
+    Identifier = "contact"
+    URL = "/#contact"
