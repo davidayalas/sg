@@ -19,7 +19,6 @@ collections: # A list of collections the CMS should be able to edit
     editor: 
       preview: false     
     slug: "{{slug}}"
-    filter: {field: "type", value: "general"}
     fields:
       - {label: "Título", name: "title", widget: "string", required: true}
       - {label: "Título 2", name: "title2", widget: "string", required: true}
@@ -93,7 +92,7 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{slug}}"
     editor: 
       preview: false     
-    filter: {field: "type", value: "orphan"}
+    filter: {field: "kind", value: "orphan"}
     fields:
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Descripción", name: "description", widget: "string"}
