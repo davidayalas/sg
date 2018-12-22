@@ -11,35 +11,39 @@
 {{ $quality := .quality }}
 
 {{ if $images }}
-    {{ range first 1 $images }}	
-        {{ $img := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
-        {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
-            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
-        {{ else if gt $img.Width $height }}
-            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
-        {{ else }}
-            {{ $scratch.Set "resized" $img }}
-        {{ end }}
-
-        {{ if $link }}
-        <a href="{{$img.RelPermalink}}" class="{{$css}}">
-        {{ end }}
-            <img src="{{ ($scratch.Get "resized").RelPermalink}}" alt="" />
-        {{ if $link }}
-        </a>
-        {{ end }}
+    {{ range first 1 $images }}
+        {{ $image = .image }}
     {{ end }}
-{{ else if $image }}
+{{ end }}
+
+{{ if $image }}
     {{ $img := $mediaPage.Resources.GetMatch (replace $image "/media/" "") }}            
+
     {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
-        {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q75")) }}
+        {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
     {{ else if gt $img.Width $height }}
-        {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q75")) }}
+        {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
     {{ else }}
         {{ $scratch.Set "resized" $img }}
     {{ end }}
-    <span class="image main"></a><img src="{{ ( $scratch.Get "resized").RelPermalink}}" alt="" /></span>
 
+    {{ if $link }}
+        {{ if eq .c.Section "galeria" }}
+            <a href="{{.c.URL}}" class="{{$css}}">
+        {{ else }}
+            <a href="{{$img.RelPermalink}}" class="{{$css}}">
+        {{ end }}
+    {{ else }}
+        <span class="image main">        
+    {{ end }}
+
+        <img src="{{ ($scratch.Get "resized").RelPermalink}}" alt="" />
+
+    {{ if $link }}
+        </a>
+    {{ else }}
+        </span>
+    {{ end }}
 {{ else }}
     <span class="image main"><img src="/assets/img/sambo_597.png" alt="" /></span>
 {{ end }}

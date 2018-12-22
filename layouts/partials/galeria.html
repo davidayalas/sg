@@ -5,12 +5,9 @@
     {{ $paginator := .Paginate (where .Data.Pages "Section" "galeria") $data.Params.pagination}}
 
     {{ if eq $paginator.PageNumber 1 }}
+
         {{ range first 1 $paginator.Pages.ByDate.Reverse }}
-            {{ if .Params.image }}
-                {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
-                {{ $thumb := $image.Fill "1194x581 q90" }}
-                    <span class="image fit"><a href="{{.URL}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span>
-            {{ end }}
+            {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
         {{ end }}
     {{ end }}
 
