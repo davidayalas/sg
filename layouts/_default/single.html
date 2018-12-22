@@ -7,6 +7,8 @@
 <html>
 	<head>
 		{{ $data := .Site.GetPage "page" "general.md" }}
+		{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+
 	    {{ partial "head.html" . }}
 	</head>
 	<body class="is-preload">
@@ -38,7 +40,6 @@
 								</header>
 
 								{{ if .Params.images }}
-									{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
 									{{ range first 1 .Params.images }}	
 										{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
 										{{ $thumb := $image.Fill "1194x581 q90" }}
@@ -51,7 +52,6 @@
 								{{ if .Params.images }}
 								<div class="box alt">
 									<div class="row gtr-50 gtr-uniform">
-									{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
 									{{ range $index, $value := .Params.images }}	
 										{{ if (gt $index 0) }}
 											{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
@@ -80,11 +80,10 @@
 							{{ if eq .Section "galeria"}}
 								{{ $.Scratch.Set "processed" "true" }}
 								{{ if .Params.image }}
-									{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
-										{{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
-										{{ $thumb := $image.Fill "1194x581 q90" }}
-										<h2>{{.Title}}</h2>
-										<div class="image main"><a href="{{ $image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></div>
+									{{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
+									{{ $thumb := $image.Fill "1194x581 q90" }}
+									<h2>{{.Title}}</h2>
+									<div class="image main"><a href="{{ $image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></div>
 								{{ end }}
 							{{ end }}
 
