@@ -50,4 +50,4 @@ anchor = "Center"
 	Name = "Contacto"
     Weight = 11
     Identifier = "contact"
-    URL = "/#contact"
+    URL = "#contact"
