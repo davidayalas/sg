@@ -76,7 +76,7 @@ body.is-preload #logo.fade-in:before {
 
 	 body div#logo{
 		background-position: top center;
-		background-size: 70%;
+		background-size: 70%!important;
 	}
 
 	.pagination .page-item{
@@ -93,7 +93,16 @@ body.is-preload #logo.fade-in:before {
 @media screen and (max-width: 736px) {
 
 	body.home div#logo, body div#logo {
-		background-position: top center;
+		background-position: top 5%;
+		background-size: 40%;
+	}
+	
+}
+
+@media screen and (max-width: 980px) {
+
+	body.home div#logo, body div#logo {
+		background-position: top 0%;
 		background-size: 35%;
 	}
 }
