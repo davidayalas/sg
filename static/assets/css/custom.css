@@ -86,9 +86,9 @@ body.is-preload #logo.fade-in:before {
 	.pagination .page-item:nth-child(1), .pagination .page-item:nth-child(2),
 	.pagination .page-item:nth-last-child(1), .pagination .page-item:nth-last-child(2) {
 		display: block!important;
-	  }
+	}
 
-}*/
+}
 
 @media screen and (max-width: 736px) {
 

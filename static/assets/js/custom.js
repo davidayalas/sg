@@ -7,6 +7,7 @@
         }else if($("ul.pagination li:nth-last-child(2)").hasClass("disabled")){
             $("ul.pagination li:last-child").addClass("disabled");
         }
+        $(".pagination li a").each((i,e) => $(e).attr("href", $(e).attr("href")+"#main"))
     }
 
     if(window.netlifyIdentity) {
