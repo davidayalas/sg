@@ -90,6 +90,7 @@ body.is-preload #logo.fade-in:before {
 
 }
 
+
 @media screen and (max-width: 736px) {
 
 	body.home div#logo, body div#logo {
@@ -103,6 +104,6 @@ body.is-preload #logo.fade-in:before {
 
 	body.home div#logo, body div#logo {
 		background-position: top 0%;
-		background-size: 35%;
+		background-size: 25%;
 	}
 }
