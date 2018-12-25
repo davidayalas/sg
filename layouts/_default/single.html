@@ -11,7 +11,7 @@
 
 	    {{ partial "head.html" . }}
 	</head>
-	<body class="is-preload">
+	<body class="is-preload single">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -73,6 +73,7 @@
 							{{ if eq .Section "galeria"}}
 								{{ $.Scratch.Set "processed" "true" }}
 								<h2>{{.Title}}</h2>
+								
 								{{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "youtube" .Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
 
 							{{ end }}

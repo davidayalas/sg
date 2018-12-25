@@ -24,7 +24,7 @@
                         {{ range last 1 $yt }}
                             {{  $yt = . }}
                         {{ end }}
-                        <iframe width="387" height="236"
+                        <iframe class="youtube"
                             src="https://www.youtube.com/embed/{{$yt}}">
                         </iframe>
                     {{ end }}
