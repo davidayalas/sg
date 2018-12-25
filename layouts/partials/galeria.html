@@ -20,8 +20,12 @@
                         {{ $thumb := $image.Fill "387x236 q90" }}
                         <a href="{{.URL}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a>
                     {{ else if .Params.youtube }}
+                        {{$yt := split .Params.youtube "/"}}
+                        {{ range last 1 $yt }}
+                            {{  $yt = . }}
+                        {{ end }}
                         <iframe width="387" height="236"
-                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            src="https://www.youtube.com/embed/{{$yt}}">
                         </iframe>
                     {{ end }}
                     </span></div>                    
