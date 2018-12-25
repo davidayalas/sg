@@ -44,10 +44,10 @@ collections: # A list of collections the CMS should be able to edit
     editor: 
       preview: false     
     fields:
-      - {label: "Título", name: "title", widget: string, required: true}
-      - {label: "Fecha", name: "date", widget: date, required: true}
-      - {label: "Imagen", name: "image", widget: image}
-      - {label: "Youtube", name: "youtube", widget: string}
+      - {label: "Título", name: "title", widget: string}
+      - {label: "Fecha", name: "date", widget: date}
+      - {label: "Imagen", name: "image", widget: image, required: false}
+      - {label: "Youtube", name: "youtube", widget: string, required: false}
 
   - name: "noticias"
     label: "Noticias"
