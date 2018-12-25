@@ -15,7 +15,7 @@
             {{ range $index, $value := where $.Paginator.Pages.ByDate.Reverse "Params.hidden" "ne" "true" }}
                 {{ if or (and (gt $index 0) (eq $paginator.PageNumber 1)) (gt $paginator.PageNumber 1) }}
                     {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}   
-                    <div class="col-4 col-12-small"><span class="image fit"></span>
+                    <div class="col-4 col-12-small"><span class="image fit">
                     {{ if $image }}         
                         {{ $thumb := $image.Fill "387x236 q90" }}
                         <a href="{{.URL}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a>
