@@ -51,7 +51,11 @@
         {{  $yt = . }}
     {{ end }}
     <span class="image main">  
-    <iframe class="youtube"
+    <iframe class="youtube" allowfullscreen="allowfullscreen"
+    mozallowfullscreen="mozallowfullscreen" 
+    msallowfullscreen="msallowfullscreen" 
+    oallowfullscreen="oallowfullscreen" 
+    webkitallowfullscreen="webkitallowfullscreen"
         src="https://www.youtube.com/embed/{{$yt}}">
     </iframe>
     </span>
