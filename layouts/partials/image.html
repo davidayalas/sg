@@ -4,6 +4,7 @@
 
 {{ $images := .images }}
 {{ $image := .image }}
+{{ $youtube := .youtube }}
 {{ $link := .link }}
 {{ $css := .css }}
 {{ $height := .height }}
@@ -44,6 +45,14 @@
     {{ else }}
         </span>
     {{ end }}
+{{ else if $youtube }}
+    {{$yt := split $youtube "/"}}
+    {{ range last 1 $yt }}
+        {{  $yt = . }}
+    {{ end }}
+    <iframe width="{{$width}}" height="{{$height}}"
+        src="https://www.youtube.com/embed/{{$yt}}">
+    </iframe>
 {{ else }}
     <span class="image main"><img src="/assets/img/sambo_597.png" alt="" /></span>
 {{ end }}

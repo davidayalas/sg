@@ -5,9 +5,8 @@
     {{ $paginator := .Paginate (where .Data.Pages "Section" "galeria") $data.Params.pagination}}
 
     {{ if eq $paginator.PageNumber 1 }}
-
         {{ range first 1 $paginator.Pages.ByDate.Reverse }}
-            {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
+            {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "youtube" .Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
         {{ end }}
     {{ end }}
 
@@ -15,12 +14,20 @@
         <div class="row gtr-50 gtr-uniform">
             {{ range $index, $value := where $.Paginator.Pages.ByDate.Reverse "Params.hidden" "ne" "true" }}
                 {{ if or (and (gt $index 0) (eq $paginator.PageNumber 1)) (gt $paginator.PageNumber 1) }}
-                    {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}            
-                    {{ $thumb := $image.Fill "387x236 q90" }}
-                    <div class="col-4 col-12-small"><span class="image fit"><a href="{{.URL}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span></div>
+                    {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}   
+                    <div class="col-4 col-12-small"><span class="image fit"></span>
+                    {{ if $image }}         
+                        {{ $thumb := $image.Fill "387x236 q90" }}
+                        <a href="{{.URL}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a>
+                    {{ else if .Params.youtube }}
+                        <iframe width="387" height="236"
+                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>
+                    {{ end }}
+                    </span></div>                    
                 {{ end }}
             {{ end }}
-        </div>
+            </div>
     </div>
 
 </section>
