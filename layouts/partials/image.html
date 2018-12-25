@@ -6,6 +6,7 @@
 {{ $image := .image }}
 {{ $youtube := .youtube }}
 {{ $link := .link }}
+{{ $originallink := .originallink }}
 {{ $css := .css }}
 {{ $height := .height }}
 {{ $width := .width }}
@@ -26,10 +27,10 @@
         {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
     {{ else }}
         {{ $scratch.Set "resized" $img }}
-    {{ end }}
+    {{ end }} 
 
     {{ if $link }}
-        {{ if eq .c.Section "galeria" }}
+        {{ if and (eq .c.Section "galeria") $originallink}}
             <a href="{{.c.URL}}" class="{{$css}}">
         {{ else }}
             <a href="{{$img.RelPermalink}}" class="{{$css}}">
@@ -50,15 +51,14 @@
     {{ range last 1 $yt }}
         {{  $yt = . }}
     {{ end }}
-    <span class="image main">  
-    <iframe class="youtube" allowfullscreen="allowfullscreen"
-    mozallowfullscreen="mozallowfullscreen" 
-    msallowfullscreen="msallowfullscreen" 
-    oallowfullscreen="oallowfullscreen" 
-    webkitallowfullscreen="webkitallowfullscreen"
-        src="https://www.youtube.com/embed/{{$yt}}">
+    <iframe class="youtube" 
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen" 
+            msallowfullscreen="msallowfullscreen" 
+            oallowfullscreen="oallowfullscreen" 
+            webkitallowfullscreen="webkitallowfullscreen"
+            src="https://www.youtube.com/embed/{{$yt}}">
     </iframe>
-    </span>
 {{ else }}
     <span class="image main"><img src="/assets/img/sambo_597.png" alt="" /></span>
 {{ end }}

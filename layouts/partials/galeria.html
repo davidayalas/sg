@@ -14,21 +14,11 @@
         <div class="row gtr-50 gtr-uniform">
             {{ range $index, $value := where $.Paginator.Pages.ByDate.Reverse "Params.hidden" "ne" "true" }}
                 {{ if or (and (gt $index 0) (eq $paginator.PageNumber 1)) (gt $paginator.PageNumber 1) }}
-                    {{ $image := $mediaPage.Resources.GetMatch (replace .Params.image "/media/" "") }}   
-                    <div class="col-4 col-12-small"><span class="image fit">
-                    {{ if $image }}         
-                        {{ $thumb := $image.Fill "387x236 q90" }}
-                        <a href="{{.URL}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a>
-                    {{ else if .Params.youtube }}
-                        {{$yt := split .Params.youtube "/"}}
-                        {{ range last 1 $yt }}
-                            {{  $yt = . }}
-                        {{ end }}
-                        <iframe class="youtube"
-                            src="https://www.youtube.com/embed/{{$yt}}">
-                        </iframe>
-                    {{ end }}
-                    </span></div>                    
+                    <div class="col-4 col-12-small">
+                        <span class="image fit">
+                        {{ partial "image.html" (dict "c" . "images" nil "image" .Params.image "youtube" .Params.youtube "link" true "originallink" true  "css" "image main" "width" 387 "height" 236 "quality" 90) }}
+                        </span>
+                    </div>                    
                 {{ end }}
             {{ end }}
             </div>
