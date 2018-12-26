@@ -4,7 +4,7 @@ title2: Sambo Granollers
 schedule: Martes y Jueves de 19.30h a 21h
 address: 'Carrer del Camp de les Moreres, s/n, 08401 Granollers, Barcelona'
 phone: 555 55 55
-email: sambogranollers@hotmail.com
+email: sambogranollers@gmail.com
 social:
   - class: fa-twitter
     link: 'https://twitter.com/sambogranollers'
@@ -16,6 +16,5 @@ social:
     link: 'https://www.instagram.com/sambogranollers'
     title: Instagram
 pagination: '5'
-kind: general
 ---
 
