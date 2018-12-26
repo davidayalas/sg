@@ -16,12 +16,12 @@ Según la Federación Internacional de Estilos de Lucha libre Asociados (FILA), 
 
 Las modalidades del sambo son:
 
-Estilos de SamboEditar
+Estilos de Sambo:
 
 Aunque al principio fuera un solo sistema, ahora hay tres estilos generalmente reconocidos del sambo:
 
-\    Lucha Sambo (Borba Sambo) es estilísticamente similar a la lucha libre olímpica, y al Judo. La competición es similar al Judo, pero con algunas diferencias en reglas, protocolo, y uniforme. Por ejemplo, en contraste con el Judo, el sambo permite todos los tipos de luxaciones de rodilla y tobillo, pero sin permitir el uso de estrangulaciones.
+\    Lucha Sambo (Borba Sambo) es estilísticamente similar a la lucha libre olímpica, y al Judo. La competición es similar al Judo, pero con algunas diferencias en reglas, protocolo y uniforme. Por ejemplo, en contraste con el Judo, el sambo permite todos los tipos de luxaciones de rodilla y tobillo, pero sin permitir el uso de estrangulaciones.
 
 \    Sambo defensa personal, variante similar al Judo, al Aikido, al jiu-jitsu y al karate tradicionales. Está basada en la aplicación de técnicas prácticas para la defensa propia, como la defensa contra ataques tanto por atacantes armados como desarmados,.
 
-\    Combat Sambo (en ruso: Боевое Самбо, Boyevoye Sambo). Este es posiblemente la raíz del sambo como es conocido ahora, e incluye la práctica con armas punzocortantes y de fuego, incluyendo técnicas de desarme. La competición en el combate se parece a formas más antiguas del judo, del karate y otras artes marciales más modernas como el kickboxing, incluye formas más desarrolladas de golpes y en la lucha cuerpo a cuerpo.
+\    Combat Sambo (en ruso: Боевое Самбо, Boyevoye Sambo). Este es posiblemente la raíz del sambo como es conocido ahora, e incluye la práctica con armas punzocortantes y de fuego, incluyendo técnicas de desarme. La competición en el combate se parece a formas más antiguas del judo,  karate y otras artes marciales más modernas como el kickboxing, incluye formas más desarrolladas de golpes y en la lucha cuerpo a cuerpo.
