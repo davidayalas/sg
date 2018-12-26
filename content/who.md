@@ -1,14 +1,33 @@
 ---
 title: Quiénes somos
-description: Lorem ipsum dolor sit amet
-kind: orphan
+description: Somos un Club situado en Granollers.
 ---
-..., consectetur adipiscing elit. Maecenas eu purus a velit gravida aliquam. Curabitur pharetra turpis a sem varius, non feugiat nisi tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut massa elit, placerat et enim in, fermentum interdum turpis. Donec vitae felis ut ligula scelerisque ultrices. Phasellus dolor justo, interdum vitae tincidunt id, finibus a neque. Fusce cursus neque odio, a hendrerit sem ullamcorper ac. Aliquam blandit felis augue, in tincidunt lacus sollicitudin sit amet. Ut ante sapien, dignissim a dui in, rhoncus fringilla lacus. Vivamus vestibulum justo et venenatis vestibulum. Duis non volutpat nibh.
+Somos un Club situado en Granollers el cual imparte clases de Sambo.
 
-Sed orci magna, iaculis id nunc non, condimentum cursus purus. Maecenas rhoncus urna a quam placerat pharetra. Sed suscipit purus mattis dapibus accumsan. Nulla non ornare justo. Ut ultricies turpis eu dui pellentesque, vitae tempor nibh ornare. Duis tempus hendrerit neque, et tincidunt orci tincidunt ut. Praesent viverra diam felis, condimentum hendrerit mi vehicula sit amet. Aliquam eu sapien cursus, malesuada lacus et, iaculis nisi. Donec et quam quis quam interdum accumsan eget sit amet mauris. Donec in enim sagittis, dapibus massa ut, volutpat neque. Fusce mollis ante vitae tortor scelerisque, a sagittis dolor varius. Aliquam eu volutpat justo, quis malesuada erat. Fusce consequat neque arcu, vel consequat arcu vulputate sed.
+Las clases son para todas las edades Infantil, júnior cadete, senior y veteranos. Tanto para mujeres como para hombres.
 
-Suspendisse facilisis libero eget tellus fringilla, at efficitur sem fermentum. Quisque purus nisl, facilisis luctus nulla vitae, placerat ornare elit. Nunc ligula mauris, placerat gravida condimentum vel, vestibulum vitae ante. Etiam congue lacinia pulvinar. In egestas, libero ut viverra tincidunt, lorem nibh luctus ligula, vitae gravida odio justo eu est. Mauris feugiat ipsum neque, eget laoreet ligula sagittis sed. In molestie nibh lobortis eros tincidunt, eget dapibus tellus blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor tempus pellentesque. Fusce fringilla eleifend massa, id sodales eros dapibus sed. Sed sit amet nisl risus. Aliquam ultricies pellentesque tortor, sit amet maximus metus eleifend a. Proin id pellentesque est. Proin suscipit libero in gravida faucibus. Nam tristique vel libero et egestas. Sed non nulla risus.
+No hace falta tener conocimientos de otras artes marciales ni tener un físico especial para la práctica,  si no cualquiera puede empezar la práctica del Sambo.
 
-Curabitur non turpis sed sem ultrices lacinia in feugiat nisi. Donec volutpat dolor dictum dui congue facilisis. Aliquam blandit consequat eros, sed ultricies tortor ullamcorper lobortis. Donec in orci nunc. Fusce sit amet mi sit amet odio tincidunt pulvinar vel non ligula. Nulla facilisi. Etiam sagittis libero a nibh venenatis tincidunt. Fusce ut justo consectetur, euismod ligula non, pulvinar elit. Etiam massa erat, condimentum id tellus vel, faucibus facilisis lectus. Aliquam tempor mauris vel risus accumsan, porta ultricies purus ultricies. Donec sit amet sagittis magna. Cras rhoncus lorem ut nulla lacinia porta vel maximus purus.
+Sambo (en ruso: Cамбо, es un acrónimo de САМозащита Без Оружия, ''SAMozashchita Bez Orúzhiya'' que significa literalmente "defensa personal sin armas" en ruso) es un deporte de combate y sistema de defensa propia desarrollado en la antigua Unión Soviética, y reconocido como un deporte nacional por el Comité de Deportes de Toda la URSS en 1938.
 
-In hac habitasse platea dictumst. Nulla vel ante facilisis ligula efficitur facilisis vel et libero. Aliquam auctor, arcu sit amet tincidunt luctus, libero magna vulputate lectus, eu dignissim lacus ligula eget sapien. Aliquam tincidunt eu mauris ut ornare. In vitae neque nec mi elementum tempus. Phasellus ex lacus, condimentum eget fringilla id, venenatis gravida nibh. Pellentesque nunc tellus, facilisis ut rhoncus fermentum, interdum in eros. Sed vulputate, ligula ut efficitur bibendum, tellus ex fermentum quam, eget dignissim eros magna quis felis. Nulla eu erat et libero rutrum aliquet nec vel enim. Suspendisse id porttitor sem. Cras vel eros congue mauris consequat feugiat et eget nibh.
+Según la Federación Internacional de Estilos de Lucha libre Asociados (FILA), el sambo es una de las cuatro formas principales de la lucha libre competitiva aficionada que se practican actualmente, siendo las otras tres la lucha grecorromana, la lucha de estilo libre y el judo. 
+
+Las modalidades del sambo son:
+
+Estilos de SamboEditar
+
+
+
+Aunque al principio fuera un solo sistema, ahora hay tres estilos generalmente reconocidos del sambo:
+
+
+
+\    Lucha Sambo (Borba Sambo) es estilísticamente similar a la lucha libre olímpica, y al Judo. La competición es similar al Judo, pero con algunas diferencias en reglas, protocolo, y uniforme. Por ejemplo, en contraste con el Judo, el sambo permite todos los tipos de luxaciones de rodilla y tobillo, pero sin permitir el uso de estrangulaciones.
+
+
+
+\    Sambo defensa personal, variante similar al Judo, al Aikido, al jiu-jitsu y al karate tradicionales. Está basada en la aplicación de técnicas prácticas para la defensa propia, como la defensa contra ataques tanto por atacantes armados como desarmados,.
+
+
+
+\    Combat Sambo (en ruso: Боевое Самбо, Boyevoye Sambo). Este es posiblemente la raíz del sambo como es conocido ahora, e incluye la práctica con armas punzocortantes y de fuego, incluyendo técnicas de desarme. La competición en el combate se parece a formas más antiguas del judo, del karate y otras artes marciales más modernas como el kickboxing, incluye formas más desarrolladas de golpes y en la lucha cuerpo a cuerpo.
