@@ -12,7 +12,7 @@
 
     <div class="box alt">
         <div class="row gtr-50 gtr-uniform">
-            {{ range $index, $value := where $.Paginator.Pages.ByDate.Reverse "Params.hidden" "ne" "true" }}
+            {{ range $index, $value := $.Paginator.Pages.ByDate.Reverse }}
                 {{ if or (and (gt $index 0) (eq $paginator.PageNumber 1)) (gt $paginator.PageNumber 1) }}
                     <div class="col-4 col-12-small">
                         <span class="image fit">

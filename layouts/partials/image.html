@@ -14,13 +14,17 @@
 
 {{ if $images }}
     {{ range first 1 $images }}
-        {{ $image = .image }}
+        {{if .image }}
+            {{ $image = .image }}
+        {{ else if .youtube }}
+            {{ $youtube = .youtube }}
+        {{ end }}
     {{ end }}
 {{ end }}
 
 {{ if $image }}
     {{ $img := $mediaPage.Resources.GetMatch (replace $image "/media/" "") }}            
-
+    
     {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
         {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
     {{ else if gt $img.Width $height }}
@@ -51,7 +55,7 @@
     {{ range last 1 $yt }}
         {{  $yt = . }}
     {{ end }}
-    <iframe class="youtube" 
+    <iframe style="max-height={{$height}}" class="youtube" 
             allowfullscreen="allowfullscreen"
             mozallowfullscreen="mozallowfullscreen" 
             msallowfullscreen="msallowfullscreen" 

@@ -43,7 +43,6 @@
                     <span class="date">{{ .Date.Format "02-01-2006" }}</span>
                     <h2><a href="{{.URL}}">{{.Title}}</a></h2>
                 </header>
-
                 {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "youtube" .Params.youtube "link" false "css" "image main" "width" 448 "height" 272 "quality" 75) }}
 
                 <p>{{ .Description }}</p>

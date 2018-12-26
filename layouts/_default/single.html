@@ -45,11 +45,14 @@
 								{{ if .Params.images }}
 								<div class="box alt">
 									<div class="row gtr-50 gtr-uniform">
+									{{ $.Scratch.Set "context" . }}
 									{{ range $index, $value := .Params.images }}	
 										{{ if (gt $index 0) }}
-											{{ $image := $mediaPage.Resources.GetMatch (replace .image "/media/" "") }}            
-											{{ $thumb := $image.Fill "387x236 q90" }}
-											<div class="col-4 col-12-small"><span class="image fit"><a href="{{$image.RelPermalink}}" class="image"><img src="{{$thumb.RelPermalink}}" alt="" /></a></span></div>
+										<div class="col-4 col-12-small">
+											<span class="image fit">
+												{{ partial "image.html" (dict "c" ($.Scratch.Get "context") "images" nil "image" .image "youtube" .youtube "link" true "css" "image main" "width" 387 "height" 236 "quality" 90) }}
+											</span>
+										</div>                    
 										{{ end }}
 									{{ end }}
 									</div>
