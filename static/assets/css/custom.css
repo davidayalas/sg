@@ -97,6 +97,17 @@ body.is-preload #logo.fade-in:before {
 		display: block!important;
 	}
 
+	.pagination .page-item:nth-child(1) a, .pagination .page-item:nth-child(2) a,
+	.pagination .page-item:nth-last-child(1) a, .pagination .page-item:nth-last-child(2) a {
+		min-width: 5rem!important;
+		height: 4rem!important;
+		line-height: calc(4rem - 4px);
+		font-weight: 1000;
+	}
+	.pagination .page-item:nth-child(1) a span, .pagination .page-item:nth-child(2) a span,
+	.pagination .page-item:nth-last-child(1) a span, .pagination .page-item:nth-last-child(2) a span{
+		font-size:1.7em!important;		
+	}
 }
 
 
