@@ -9,7 +9,7 @@ Las clases son para todas las edades Infantil, júnior cadete, senior y veterano
 
 No hace falta tener conocimientos de otras artes marciales ni tener un físico especial para la práctica,  si no cualquiera puede empezar la práctica del Sambo.
 
-Que es el Sambo?
+## ¿Qué es el Sambo?
 
 Sambo (en ruso: Cамбо, es un acrónimo de САМозащита Без Оружия, ''SAMozashchita Bez Orúzhiya'' que significa literalmente "defensa personal sin armas" en ruso) es un deporte de combate y sistema de defensa propia desarrollado en la antigua Unión Soviética, y reconocido como un deporte nacional por el Comité de Deportes de Toda la URSS en 1938.
 
