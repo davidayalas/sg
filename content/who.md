@@ -5,9 +5,9 @@ kind: orphan
 ---
 Somos un Club situado en Granollers el cual imparte clases de Sambo.
 
-Las clases son para todas las edades Infantil, júnior cadete, senior y veteranos. Tanto para mujeres como para hombres.
+Las clases son para todas las edades: infantil, júnior, cadete, sénior y veteranos. Y son tanto para mujeres como para hombres.
 
-No hace falta tener conocimientos de otras artes marciales ni tener un físico especial para la práctica,  si no cualquiera puede empezar la práctica del Sambo.
+No hace falta tener conocimientos de otras artes marciales ni tener un físico especial para la práctica,  cualquiera puede empezar a practicar el Sambo.
 
 ## ¿Qué es el Sambo?
 
