@@ -23,33 +23,38 @@
 {{ end }}
 
 {{ if $image }}
+
     {{ $img := $mediaPage.Resources.GetMatch (replace $image "/media/" "") }}            
-    
-    {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
-        {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
-    {{ else if gt $img.Width $height }}
-        {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
-    {{ else }}
-        {{ $scratch.Set "resized" $img }}
-    {{ end }} 
+ 
+    {{ if $img }}
 
-    {{ if $link }}
-        {{ if and (eq .c.Section "galeria") $originallink}}
-            <a href="{{.c.URL}}" class="{{$css}}">
+        {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
+            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
+        {{ else if gt $img.Width $height }}
+            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
         {{ else }}
-            <a href="{{$img.RelPermalink}}" class="{{$css}}">
+            {{ $scratch.Set "resized" $img }}
+        {{ end }} 
+
+        {{ if $link }}
+            {{ if and (eq .c.Section "galeria") $originallink}}
+                <a href="{{.c.URL}}" class="{{$css}}">
+            {{ else }}
+                <a href="{{$img.RelPermalink}}" class="{{$css}}">
+            {{ end }}
+        {{ else }}
+            <span class="image main">        
         {{ end }}
-    {{ else }}
-        <span class="image main">        
-    {{ end }}
 
-        <img src="{{ ($scratch.Get "resized").RelPermalink}}" alt="" />
+            <img src="{{ ($scratch.Get "resized").RelPermalink}}" alt="" />
 
-    {{ if $link }}
-        </a>
-    {{ else }}
-        </span>
+        {{ if $link }}
+            </a>
+        {{ else }}
+            </span>
+        {{ end }}
     {{ end }}
+    
 {{ else if $youtube }}
     {{$yt := split $youtube "/"}}
     {{ range last 1 $yt }}
