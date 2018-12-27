@@ -32,6 +32,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Enlace", name: "link", widget: string}
           - {label: "CSS Class", name: "class", widget: string}
       - {label: "Paginación", name: "pagination", widget: "number", required: true, default: 5}
+      - {label: "Kind", name: "kind", widget: "hidden", default: "general"}
 
   - name: "galeria"
     label: "Galeria"
@@ -97,3 +98,4 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Descripción", name: "description", widget: "string"}
       - {label: "Contenido", name: "body", widget: "markdown"}
+      - {label: "Kind", name: "kind", widget: "hidden", default: "orphan"}

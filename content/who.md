@@ -1,6 +1,7 @@
 ---
 title: Quiénes somos
 description: Somos un Club situado en Granollers.
+kind: orphan
 ---
 Somos un Club situado en Granollers el cual imparte clases de Sambo.
 
