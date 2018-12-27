@@ -1,14 +1,11 @@
 backend:
   branch: master
   name: git-gateway
-  #name: github
-  #repo: davidayalas/new-ckm
 
 display_url: https://www.sambogranollers.com
 
 media_folder: "/content/media" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/media"
-#publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
   - name: "general"
