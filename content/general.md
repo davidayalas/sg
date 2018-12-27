@@ -16,6 +16,7 @@ social:
     link: 'https://www.instagram.com/sambogranollers'
     title: Instagram
 pagination: '5'
+pagination_gallery: '4'
 kind: general
 ---
 

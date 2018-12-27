@@ -2,7 +2,7 @@
 
 <section>
     {{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
-    {{ $paginator := .Paginate (where .Data.Pages "Section" "galeria") $data.Params.pagination}}
+    {{ $paginator := .Paginate (where .Data.Pages "Section" "galeria") $data.Params.pagination_gallery}}
 
     {{ if eq $paginator.PageNumber 1 }}
         {{ range first 1 $paginator.Pages.ByDate.Reverse }}
