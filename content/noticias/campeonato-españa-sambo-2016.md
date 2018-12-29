@@ -5,6 +5,9 @@ date: '2016-03-13T03:01:51+01:00'
 images:
   - image: /media/20170312_123027.jpg
   - image: /media/medalla.jpg
+medias:
+  - media: Entreno de un día cualquiera en nuestro Club
+  - media: Entreno navideño
 ---
 El día 13 de marzo de 2016 se celebró en la ciudad de Cáceres el campeonato de España de Sambo, con un buen resultado para lala selección catalana de Sambo, encabezada por Víctor Gómez del Club Sambo Granollers.
 
