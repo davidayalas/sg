@@ -68,13 +68,11 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Descripción", name: "title", widget: string}
           - {label: "Imagen", name: "image", widget: image, required: false}
           - {label: "Youtube", name: "youtube", widget: string, required: false}
-      - label: "Media (no usar todavía - only David)"
-        name: "media"
-        widget: "relation"
-        collection: "galeria"
-        searchFields: ["title"]
-        valueField: "title"
-        displayFields: ["title"]
+      - label: "Multimedias (no usar todavía - only David)"
+        name: "medias"
+        widget: "list"
+        fields: 
+          - {label: "media", name: "media", widget: "relation", collection: "galeria", searchFields: ["title"], valueField: "title", displayFields: ["title"]}
 
   - name: "agenda"
     label: "Agenda"
