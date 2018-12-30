@@ -23,9 +23,8 @@
 {{ end }}
 
 {{ if $image }}
-
     {{ $img := $mediaPage.Resources.GetMatch (replace $image "/media/" "") }}            
- 
+    
     {{ if $img }}
 
         {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
