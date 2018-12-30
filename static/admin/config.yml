@@ -43,7 +43,7 @@ collections: # A list of collections the CMS should be able to edit
     editor: 
       preview: false     
     fields:
-      - {label: "Clave", name: "key", widget: string, pattern: ['^[a-z0-9-]*$', "Sólo minúsculas sin acentos, números y guiones"]}
+      - {label: "Clave (no modificar NUNCA)", name: "key", widget: string, pattern: ['^[a-z0-9-]*$', "Sólo minúsculas sin acentos, números y guiones"]}
       - {label: "Título", name: "title", widget: string}
       - {label: "Fecha", name: "date", widget: date}
       - {label: "Imagen", name: "image", widget: image, required: false}
