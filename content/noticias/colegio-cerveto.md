@@ -5,7 +5,7 @@ date: '2018-04-21T01:00:00+02:00'
 images:
   - image: /media/colegi-cerveto.jpg
 medias:
-  - media: Ahaggss
+  - media: colegio-cerveto
 ---
 Éstos dias hemos realizado clases de Sambo con los alumnos de 5° y 6° de primaria del Colegio Cervetó.
 
