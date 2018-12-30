@@ -38,19 +38,28 @@
 									<p>{{.Description}}</p>
 								</header>
 
-								{{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "youtube" .Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
+								{{ if .Params.medias }}
+									{{ range first 1 .Params.medias }}
+										{{ $mediagallery := $.Site.GetPage "page" (print "galeria/" (lower .media) ".md") }}
+										{{ if $mediagallery }}
+											{{ partial "image.html" (dict "c" . "images" nil "image" $mediagallery.Params.image "youtube" $mediagallery.Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
+										{{ end }}
+									{{ end }}
+								{{ end }}
 
 								{{.Content}}
 
-								{{ if .Params.images }}
+								{{ if .Params.medias }}
 								<div class="box alt">
 									<div class="row gtr-50 gtr-uniform">
 									{{ $.Scratch.Set "context" . }}
-									{{ range $index, $value := .Params.images }}	
+									{{ range $index, $value := .Params.medias }}
 										{{ if (gt $index 0) }}
+											{{ $mediagallery := $.Site.GetPage "page" (print "galeria/" (lower .media) ".md") }}
+
 										<div class="col-4 col-12-small">
 											<span class="image fit">
-												{{ partial "image.html" (dict "c" ($.Scratch.Get "context") "images" nil "image" .image "youtube" .youtube "link" true "css" "image main" "width" 387 "height" 236 "quality" 90) }}
+												{{ partial "image.html" (dict "c" ($.Scratch.Get "context") "images" nil "image" $mediagallery.Params.image "youtube" $mediagallery.Params.youtube "link" true "css" "image main" "width" 387 "height" 236 "quality" 90) }}
 											</span>
 										</div>                    
 										{{ end }}
