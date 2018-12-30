@@ -6,5 +6,6 @@ medias:
   - media: combat-sambo
   - media: grupo
   - media: entreno-tipo
+  - media: diario-campeonato-espana-2016
 ---
 Prueba de carga de elementos directos de la galería
