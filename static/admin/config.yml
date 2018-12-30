@@ -39,10 +39,11 @@ collections: # A list of collections the CMS should be able to edit
     label: "Galeria"
     folder: "content/galeria"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{key}}"
     editor: 
       preview: false     
     fields:
+      - {label: "Clave", name: "key", widget: string, pattern: ['^[a-z0-9-]*$', "Sólo minúsculas sin acentos, números y guiones"]}
       - {label: "Título", name: "title", widget: string}
       - {label: "Fecha", name: "date", widget: date}
       - {label: "Imagen", name: "image", widget: image, required: false}
@@ -72,7 +73,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "medias"
         widget: "list"
         fields: 
-          - {label: "media", name: "media", widget: "relation", collection: "galeria", searchFields: ["title"], valueField: "slug", displayFields: ["title"]}
+          - {label: "media", name: "media", widget: "relation", collection: "galeria", searchFields: ["title"], valueField: "slug", displayFields: ["title"], required: false}
 
   - name: "agenda"
     label: "Agenda"
