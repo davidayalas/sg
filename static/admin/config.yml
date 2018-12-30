@@ -73,7 +73,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "medias"
         widget: "list"
         fields: 
-          - {label: "media", name: "media", widget: "relation", collection: "galeria", searchFields: ["title","date","image","key"], valueField: "key", displayFields: ["title"], required: false}
+          - {label: "media", name: "media", widget: "relation", collection: "galeria", searchFields: ["title","date","image","key"], valueField: "key", displayFields: ["title","key","image"], required: false}
 
   - name: "agenda"
     label: "Agenda"
