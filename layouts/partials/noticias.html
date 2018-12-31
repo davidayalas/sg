@@ -20,21 +20,8 @@
             <p>{{.Description}}</p>
         </header>
 
-        {{ if .Params.medias }}
-            {{ $.Scratch.Set "context" . }}
+        {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "youtube" .Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 75) }}
 
-            {{ range first 1 .Params.medias }}
-                {{ $mediagallery := $.Site.GetPage "page" (print "galeria/" (lower .media) ".md") }}
-                {{ if $mediagallery }}
-                    {{ partial "image.html" (dict "c" ($.Scratch.Get "context") "images" nil "image" $mediagallery.Params.image "youtube" $mediagallery.Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 75) }}
-                {{ end }}
-            {{ end }}
-
-        {{ else }}
-
-            {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "youtube" .Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 75) }}
-
-        {{ end }}
 
         <ul class="actions special">
             <li><a href="{{.URL}}" class="button large">Ver más</a></li>
@@ -48,7 +35,7 @@
 <!-- Posts -->
     <section class="posts">
         <!-- range $index, $value := where .Data.Pages "Section" "noticias" -->
-        
+                    
         {{ range $index, $value := $paginator.Pages }}
             {{ if or (and (gt $index 0) (eq $paginator.PageNumber 1)) (gt $paginator.PageNumber 1) }}
                 
@@ -58,22 +45,8 @@
                     <h2><a href="{{.URL}}">{{.Title}}</a></h2>
                 </header>
 
-                {{ if .Params.medias }}
+                {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "youtube" .Params.youtube "link" false "css" "image main" "width" 448 "height" 272 "quality" 75) }}
 
-                    {{ $.Scratch.Set "context" . }}
-    
-                    {{ range first 1 .Params.medias }}
-                        {{ $mediagallery := $.Site.GetPage "page" (print "galeria/" (lower .media) ".md") }}
-                        {{ if $mediagallery }}
-                            {{ partial "image.html" (dict "c" ($.Scratch.Get "context") "images" nil "image" $mediagallery.Params.image "youtube" $mediagallery.Params.youtube "link" true "css" "image main" "width" 448 "height" 272 "quality" 75) }}
-                        {{ end }}
-                    {{ end }}
-        
-                {{ else }}
-
-                    {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "youtube" .Params.youtube "link" false "css" "image main" "width" 448 "height" 272 "quality" 75) }}
-
-                {{ end }}
                 <p>{{ .Description }}</p>
                 <ul class="actions special">
                     <li><a href="{{.URL}}" class="button">Ver más</a></li>

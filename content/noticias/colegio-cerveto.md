@@ -2,8 +2,8 @@
 title: Colegio Cervetó
 description: Clase con los alumnos del Colegio Cervetó de Granollers
 date: '2018-04-21T01:00:00+02:00'
-medias:
-  - media: colegio-cerveto
+images:
+  - image: /media/colegi-cerveto.jpg
 ---
 Éstos dias hemos realizado clases de Sambo con los alumnos de 5° y 6° de primaria del Colegio Cervetó.
 

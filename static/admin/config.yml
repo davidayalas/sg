@@ -63,10 +63,11 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Contenido", name: "body", widget: "markdown"}
       - label: "Multimedias"
-        name: "medias"
+        name: "images"
         widget: "list"
         fields: 
-          - {label: "media", name: "media", widget: "relation", collection: "galeria", searchFields: ["title","key"], valueField: "key", displayFields: ["title","key"], required: false}
+          - {label: "Imagen", name: "image", widget: "image", required: false}
+          - {label: "Youtube", name: "youtube", widget: "string", required: false}
 
   - name: "agenda"
     label: "Agenda"
