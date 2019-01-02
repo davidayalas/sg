@@ -2,6 +2,8 @@
 title: Campeonato España Sambo 2016
 description: 5 medallas para los catalanes
 date: '2016-03-13T03:01:51+01:00'
+tags:
+  - campeonatos
 images:
   - image: /media/20170312_123027.jpg
   - image: /media/medalla.jpg
