@@ -1,5 +1,7 @@
 ---
 title: Grupo
-date: 2016-07-31T00:00:00+02:00
+date: 2016-07-30T22:00:00.000Z
 image: /media/grupo.jpg
+crop: Top
 ---
+
