@@ -38,7 +38,7 @@
 									<p>{{.Description}}</p>
 								</header>
 
-								{{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "youtube" .Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
+								{{ partial "image.html" (dict "c" . "images" .Params.images "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
 
 								{{.Content}}
 
@@ -51,7 +51,7 @@
 
 											<div class="col-4 col-12-small">
 												<span class="image fit">
-													{{ partial "image.html" (dict "c" ($.Scratch.Get "context") "images" nil "image" .image "youtube" .youtube "link" true "css" "image main" "width" 387 "height" 236 "quality" 90) }}
+													{{ partial "image.html" (dict "c" ($.Scratch.Get "context") "image" .image "crop" .crop "youtube" .youtube "link" true "css" "image main" "width" 387 "height" 236 "quality" 90) }}
 												</span>
 											</div>                    
 										{{ end }}

@@ -4,6 +4,7 @@
 
 {{ $images := .images }}
 {{ $image := .image }}
+{{ $crop := .crop }}
 {{ $youtube := .youtube }}
 {{ $link := .link }}
 {{ $originallink := .originallink }}
@@ -19,7 +20,15 @@
         {{ else if .youtube }}
             {{ $youtube = .youtube }}
         {{ end }}
+
+        {{ if .crop }}
+            {{ $crop = .crop }}
+        {{ end }}
     {{ end }}
+{{ end }}
+
+{{ if eq $crop nil }}
+    {{ $crop = "Center" }}
 {{ end }}
 
 {{ if $image }}
@@ -28,9 +37,9 @@
     {{ if $img }}
 
         {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
-            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
+            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality " " $crop)) }}
         {{ else if gt $img.Width $height }}
-            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality)) }}
+            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality " " $crop)) }}
         {{ else }}
             {{ $scratch.Set "resized" $img }}
         {{ end }} 

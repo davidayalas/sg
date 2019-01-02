@@ -47,6 +47,14 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Fecha", name: "date", widget: date}
       - {label: "Imagen", name: "image", widget: image, required: false}
       - {label: "Youtube", name: "youtube", widget: string, required: false}
+      - label: "Ajustar recorte (solo imágenes)"
+        name: "crop"
+        widget: "select"
+        default: "Center"
+        options:
+          - { label: "Arriba", value: "Top" }
+          - { label: "Centro", value: "Center" }
+          - { label: "Abajo", value: "Bottom" }
 
   - name: "noticias"
     label: "Noticias"
@@ -67,6 +75,14 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Imagen", name: "image", widget: "image", required: false}
           - {label: "Youtube", name: "youtube", widget: "string", required: false}
+          - label: "Ajustar recorte (solo imágenes)"
+            name: "crop"
+            widget: "select"
+            default: "Center"
+            options:
+              - { label: "Arriba", value: "Top" }
+              - { label: "Centro", value: "Center" }
+              - { label: "Abajo", value: "Bottom" }
 
   - name: "agenda"
     label: "Agenda"
