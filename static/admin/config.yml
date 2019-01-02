@@ -45,6 +45,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Título", name: "title", widget: string}
       - {label: "Fecha", name: "date", widget: date}
+      - {label: "Etiquetas (sepáralas con comas)", name: "tags", widget: "list", allow_add: true, required: false}
       - {label: "Imagen", name: "image", widget: image, required: false}
       - {label: "Youtube", name: "youtube", widget: string, required: false}
       - label: "Ajustar recorte (solo imágenes)"
@@ -68,6 +69,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Descripción", name: "description", widget: "string"}
       - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Etiquetas (sepáralas con comas)", name: "tags", widget: "list", allow_add: true, required: false}
       - {label: "Contenido", name: "body", widget: "markdown"}
       - label: "Multimedias"
         name: "images"
@@ -96,6 +98,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Descripción", name: "description", widget: "string", required: false}
       - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Etiquetas (sepáralas con comas)", name: "tags", widget: "list", allow_add: true, required: false}
       - {label: "Hora", name: "hora", widget: "string"}
       - {label: "Lugar", name: "lloc", widget: "string"}
       - {label: "Contenido", name: "body", widget: "markdown"}

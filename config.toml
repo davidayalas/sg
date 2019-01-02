@@ -7,10 +7,13 @@ contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 
+[Taxonomies]
+    tag = "tags"
+
 [imaging]
-resampleFilter = "box"
-quality = 75
-anchor = "Center"
+    resampleFilter = "box"
+    quality = 75
+    anchor = "Center"
 
 #----------------
 # MENU PRINCIPAL
