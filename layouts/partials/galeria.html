@@ -6,7 +6,7 @@
 
     {{ if eq $paginator.PageNumber 1 }}
         {{ range first 1 $paginator.Pages.ByDate.Reverse }}
-            {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "youtube" .Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
+            {{ partial "image.html" (dict "c" . "image" .Params.image "crop" .Params.crop "youtube" .Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
         {{ end }}
     {{ end }}
 
@@ -16,7 +16,7 @@
                 {{ if or (and (gt $index 0) (eq $paginator.PageNumber 1)) (gt $paginator.PageNumber 1) }}
                     <div class="col-4 col-12-small">
                         <span class="image fit">
-                        {{ partial "image.html" (dict "c" . "images" nil "image" .Params.image "youtube" .Params.youtube "link" true "originallink" true  "css" "image main" "width" 387 "height" 236 "quality" 90) }}
+                        {{ partial "image.html" (dict "c" . "image" .Params.image "crop" .Params.crop "youtube" .Params.youtube "link" true "originallink" true  "css" "image main" "width" 387 "height" 236 "quality" 90) }}
                         </span>
                     </div>                    
                 {{ end }}
