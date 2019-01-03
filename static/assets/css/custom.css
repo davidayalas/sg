@@ -96,10 +96,10 @@ body.is-preload #logo.fade-in:before {
 		background-size: 70%!important;
 	}
 
-	body.single .youtube, body.home article .youtube, body.section article .youtube{
+	body.single .youtube, body.home article:nth-child(1) .youtube, body.section article .youtube{
 		height: 281px;
 	}
-	
+		
 	.pagination .page-item{
 		display:none!important;
 	}
@@ -129,7 +129,11 @@ body.is-preload #logo.fade-in:before {
 		background-position: top 5%;
 		background-size: 40%;
 	}
-	
+
+	body.single .youtube, body.home article:nth-child(1) .youtube, body.section article .youtube{
+		height: 381px;
+	}
+		
 }
 
 @media screen and (max-width: 980px) {
