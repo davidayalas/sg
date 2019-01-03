@@ -96,10 +96,10 @@ body.is-preload #logo.fade-in:before {
 		background-size: 70%!important;
 	}
 
-	body.single .youtube{
+	body.single .youtube, body.home article .youtube, body.section article .youtube{
 		height: 281px;
 	}
-
+	
 	.pagination .page-item{
 		display:none!important;
 	}
