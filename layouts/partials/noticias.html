@@ -7,13 +7,23 @@
     {{ $paginator = .Paginate (where .Data.Pages.ByDate.Reverse ".Section" "noticias" ) $data.Params.pagination }}
 {{ end }}
 
+{{ $.Scratch.Set "first_article_css" ""}}
+
+{{ if eq .Section "tags" }}
+
+{{ $.Scratch.Set "first_article_css" "first_article_css"}}
+    <section class="posts">
+        <h2>({{.Title}})</h2>
+    </section>
+{{ end }}
+
 {{ if (eq $paginator.PageNumber 1) }}
 
     {{ range first 1 $paginator.Pages }}
 
     <!-- range first 1 (where .Data.Pages "Section" "noticias") -->
     <!-- Featured Post -->
-    <article class="post featured">
+    <article class="post featured {{ $.Scratch.Get "first_article_css"}}">
         <header class="major">
             <span class="date">{{ .Date.Format "02-01-2006" }} </span>
             <h2><a href="{{.URL}}">{{ .Title }}</a></h2>

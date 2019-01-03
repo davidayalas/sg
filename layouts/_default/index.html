@@ -33,13 +33,15 @@
 
 				<!-- Main -->
 					<div id="main">
-
+							
 						{{ partial "noticias.html" . }}
 
 						<!-- Footer -->
-							<footer>
+							<footer class="footer_pagination">
 								{{ template "_internal/pagination.html" . }}
 							</footer>
+
+							{{ partial "categories.html" . }}
 					</div>
 
 			<!-- Footer -->

@@ -1,3 +1,11 @@
+section.posts article:nth-child(1), section.posts article:nth-child(2), aside.tags{
+	border-top: 2px solid #eeeeee!important;
+}
+
+.first_article_css{
+	padding-top: 0em!important;
+}
+
 img {
 	max-width: 100%;
 }
