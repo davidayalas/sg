@@ -52,6 +52,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "crop"
         widget: "select"
         default: "Center"
+        required: false
         options:
           - { label: "Arriba", value: "Top" }
           - { label: "Centro", value: "Center" }
@@ -81,6 +82,7 @@ collections: # A list of collections the CMS should be able to edit
             name: "crop"
             widget: "select"
             default: "Center"
+            required: false
             options:
               - { label: "Arriba", value: "Top" }
               - { label: "Centro", value: "Center" }
