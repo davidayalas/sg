@@ -33,7 +33,7 @@ ul.cms a {
 	height: 289px;
 }
 
-body.single .youtube, body.home article .youtube, body.section article .youtube{
+body.single .youtube, body.home article:nth-child(1) .youtube, body.section article .youtube{
 	height: 581px;
 }
 
