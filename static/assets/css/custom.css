@@ -131,7 +131,7 @@ body.is-preload #logo.fade-in:before {
 	}
 
 	body.single .youtube, body.home article:nth-child(1) .youtube, body.section article .youtube{
-		height: 381px;
+		height: 281px;
 	}
 		
 }
