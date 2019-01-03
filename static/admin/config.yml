@@ -68,7 +68,7 @@ collections: # A list of collections the CMS should be able to edit
       preview: false     
     fields:
       - {label: "Título", name: "title", widget: "string"}
-      - {label: "Descripción", name: "description", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "string", required: false}
       - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Etiquetas (sepáralas con comas)", name: "tags", widget: "list", allow_add: true, required: false}
       - {label: "Contenido", name: "body", widget: "markdown"}
