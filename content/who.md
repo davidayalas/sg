@@ -1,9 +1,9 @@
 ---
 title: Quiénes somos
-description: Somos un Club situado en Granollers.
+description: ' '
 kind: orphan
 ---
-Somos un Club situado en Granollers el cual imparte clases de Sambo.
+Somos un Club situado en Granollers que imparte clases de Sambo.
 
 Las clases son para todas las edades: infantil, júnior, cadete, sénior y veteranos. Y son tanto para mujeres como para hombres.
 
