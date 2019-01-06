@@ -37,11 +37,11 @@ publishdir = "public"
     Identifier = "galeria"
     URL = "/galeria"
 
-[[menu.main]]
-	Name = "Agenda"
-    Weight = 7
-    Identifier = "agenda"
-    URL = "/agenda"
+#[[menu.main]]
+#    Name = "Agenda"
+#    Weight = 7
+#    Identifier = "agenda"
+#    URL = "/agenda"
 
 [[menu.main]]
 	Name = "Quiénes somos"

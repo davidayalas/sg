@@ -1,3 +1,23 @@
+form#cercador div#searchbox, form#cercador div#search_query{
+	margin: 0;
+	height: auto;
+	padding-left:.5em;
+}
+
+form#cercador button{
+	margin:0;
+}
+
+form#cercador div#searchbox div#search_query{
+	padding-top: .5em;
+}
+
+form#cercador div#searchbox div#search_button{
+	padding-top: 0em;
+	margin: 0;
+}
+
+
 section.posts article:nth-child(1), section.posts article:nth-child(2), aside.tags{
 	border-top: 2px solid #eeeeee!important;
 }
@@ -35,6 +55,10 @@ ul.cms a {
 
 body.single .youtube, body.home article:nth-child(1) .youtube, body.section article .youtube{
 	height: 581px;
+}
+
+body.single div#hits .youtube{
+	height: 289px;
 }
 
 .hidden{
@@ -91,6 +115,21 @@ body.is-preload #logo.fade-in:before {
 
 @media screen and (max-width: 480px) {
 
+	form#cercador div#searchbox, form#cercador div#search_query{
+		margin: 0;
+		padding-left:0em;
+	}
+
+	form#cercador div#search_button{
+		margin-top:.5em;
+		margin-left:0em;
+		padding-left: 0;
+	}
+
+	form#cercador div#search_button button{
+		margin-top: .5em;
+	}
+
 	body div#logo{
 		background-position: top center;
 		background-size: 70%!important;
@@ -99,7 +138,7 @@ body.is-preload #logo.fade-in:before {
 	body.single .youtube, body.home article:nth-child(1) .youtube, body.section article .youtube{
 		height: 281px;
 	}
-		
+
 	.pagination .page-item{
 		display:none!important;
 	}
@@ -125,6 +164,21 @@ body.is-preload #logo.fade-in:before {
 
 @media screen and (max-width: 736px) {
 
+	form#cercador div#searchbox, form#cercador div#search_query{
+		margin: 0;
+		padding-left:0em;
+	}
+
+	form#cercador div#search_button{
+		margin-top:.5em;
+		margin-left:0em;
+		padding-left: 0;
+	}
+
+	form#cercador div#search_button button{
+		margin-top: .5em;
+	}
+
 	body.home div#logo, body div#logo {
 		background-position: top 5%;
 		background-size: 40%;
@@ -137,6 +191,21 @@ body.is-preload #logo.fade-in:before {
 }
 
 @media screen and (max-width: 980px) {
+
+	form#cercador div#searchbox, form#cercador div#search_query{
+		margin: 0;
+		padding-left:0em;
+	}
+
+	form#cercador div#search_button{
+		margin-top:.5em;
+		margin-left:0em;
+		padding-left: 0;
+	}
+
+	form#cercador div#search_button button{
+		margin-top: .5em;
+	}
 
 	body.home div#logo, body div#logo {
 		background-position: top 0%;

@@ -1,15 +1,29 @@
 {{ $data := .Site.GetPage "page" "general.md" }}
 
 				<nav id="nav">
-						<ul class="links">
+					<ul class="links">
 						{{ range .Site.Menus.main }}
 							{{ if or (and $.IsHome (eq "home" .Identifier)) (eq $.Section .Identifier) (eq $.File.BaseFileName .Identifier) }}
 								<li class="active">
 							{{ else }}
 								<li>
 							{{ end }}
-							<a href="{{.URL}}">{{ .Name }}</a></li>
+								<a href="{{.URL}}">{{ .Name }}</a>
+							</li>
 						{{end}}
+
+						<li>
+							<form id="cercador" action="/search" method="GET">
+								<div class="row gtr-uniform" id="searchbox">
+									<div class="col-6 col-8-small" id="search_query">
+										<input type="text" id="q" name="q" placeholder="Buscar" />
+									</div>
+									<div class="col-2 col-4-small" id="search_button">
+										<button type="submit" class="button primary icon fa-search" />
+									</div>
+								</div>
+							</form> 
+						</li>
 					</ul>
 					<ul class="icons">
 						{{ range $data.Params.social }}

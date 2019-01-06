@@ -34,6 +34,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Paginación", name: "pagination", widget: "number", required: true, default: 5}
       - {label: "Paginación Galería", name: "pagination_gallery", widget: "number", required: true, default: 4}
       - {label: "Kind", name: "kind", widget: "hidden", default: "general"}
+      - {label: "No índex", name: "no_index", widget: "hidden", default: "true"}
 
   - name: "galeria"
     label: "Galeria"
@@ -88,22 +89,22 @@ collections: # A list of collections the CMS should be able to edit
               - { label: "Centro", value: "Center" }
               - { label: "Abajo", value: "Bottom" }
 
-  - name: "agenda"
-    label: "Agenda"
-    folder: "content/agenda"
-    create: true
-    slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
-    editor: 
-      preview: false     
-    sort: "date:desc"
-    fields:
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Descripción", name: "description", widget: "string", required: false}
-      - {label: "Fecha", name: "date", widget: "datetime"}
-      - {label: "Etiquetas (sepáralas con comas)", name: "tags", widget: "list", allow_add: true, required: false}
-      - {label: "Hora", name: "hora", widget: "string"}
-      - {label: "Lugar", name: "lloc", widget: "string"}
-      - {label: "Contenido", name: "body", widget: "markdown"}
+  # - name: "agenda"
+  #   label: "Agenda"
+  #   folder: "content/agenda"
+  #   create: true
+  #   slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
+  #   editor: 
+  #     preview: false     
+  #   sort: "date:desc"
+  #   fields:
+  #     - {label: "Título", name: "title", widget: "string"}
+  #     - {label: "Descripción", name: "description", widget: "string", required: false}
+  #     - {label: "Fecha", name: "date", widget: "datetime"}
+  #     - {label: "Etiquetas (sepáralas con comas)", name: "tags", widget: "list", allow_add: true, required: false}
+  #     - {label: "Hora", name: "hora", widget: "string"}
+  #     - {label: "Lugar", name: "lloc", widget: "string"}
+  #     - {label: "Contenido", name: "body", widget: "markdown"}
 
   - name: "others"
     label: "Otros"
@@ -120,3 +121,4 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Descripción", name: "description", widget: "string"}
       - {label: "Contenido", name: "body", widget: "markdown"}
       - {label: "Kind", name: "kind", widget: "hidden", default: "orphan"}
+      - {label: "No índex", name: "no_index", widget: "hidden", default: "true"}

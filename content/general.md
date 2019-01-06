@@ -18,5 +18,6 @@ social:
 pagination: '5'
 pagination_gallery: '4'
 kind: general
+no_index: true
 ---
 
