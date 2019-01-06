@@ -133,6 +133,7 @@ function getHeader(title) {
   //return '<h5>' + title + '</h5>';
 }
 
+// Pagination modification
 function observe(){
   var body = document.getElementsByTagName('body')[0];
   var config = { attributes: true, childList: true, subtree: true };
@@ -142,7 +143,10 @@ function observe(){
         $(".pagination li span").each(function(i, el){
           $('<a class="page-link disabled">'+$(el).text()+'</a>').appendTo($(el).parent());
           $(el).remove();
-        })
+        });
+        if($(".pagination li").length===5){
+          $(".footer_pagination").css("display", "none");
+        }
         observer.disconnect();
       }
   });
@@ -150,3 +154,14 @@ function observe(){
 }
 
 observe();
+
+//Search query
+var searchterms = window.location.search.replace("?","").split("&");
+var term;
+for(var i=0,z=searchterms.length;i<z;i++){
+  term = searchterms[i].split("=");
+  if(term[0]==="q"){
+    $("#q").val(term[1]);
+    break;
+  }
+}

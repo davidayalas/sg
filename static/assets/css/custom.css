@@ -17,6 +17,9 @@ form#cercador div#searchbox div#search_button{
 	margin: 0;
 }
 
+.footer_pagination{
+	text-align: center;
+}
 
 section.posts article:nth-child(1), section.posts article:nth-child(2), aside.tags{
 	border-top: 2px solid #eeeeee!important;

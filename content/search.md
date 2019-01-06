@@ -15,11 +15,13 @@ no_index 	= true
 	</div-->
 	<div id="hits" class="col-12 col-12-small">
 	</div>
-	<div class="footer_pagination col-12">
-
-	</div>
 </div>
 
+<div class="footer_pagination col-12">
+
+</div>
+
+<img src="/images/algolia-powered-by.svg" />
 
 <!-- TEMPLATES -->
 <script type="text/html" id="hit-template">
@@ -27,13 +29,14 @@ no_index 	= true
 			<div class="col-8 col-12-small">
 				<h3><a href="{{path}}">{{{_highlightResult.title.value}}}</a></h3>
 				<p>
-					{{#description}}
-					{{{_highlightResult.description.value}}}
-					{{/description}}
-
-					{{^description}}
+					{{#content}}
 					{{{_highlightResult.content.value}}}
-					{{/description}}
+					{{/content}}
+
+					{{^content}}
+					{{{_highlightResult.description.value}}}
+					{{/content}}
+
 				</p>
 			</div>
 			<div class="col-4 col-12-small">
