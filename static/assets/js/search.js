@@ -63,11 +63,13 @@ function app(opts) {
         if(item.images && item.images.length>0){
           item.image = item.images[0].image;
         }
-
         if(item.youtube){
           yt = item.youtube.split("/");
           yt = "https://www.youtube.com/embed/"+yt.pop();
           item.youtube = yt;
+        }
+        if(item.image || item.youtube){
+          item.hasMedia = true;
         }
         return item;
       }
@@ -100,8 +102,8 @@ function app(opts) {
         root : "pagination",
         item : "page-item",
         link : "page-link",
-        disabledItem : "disabled", 
-        selectedItem: "active",
+        disabled : "disabled", 
+        active: "active",
         first : "first",
         last : "last",
         page : ""
@@ -130,7 +132,7 @@ function app(opts) {
     if($(".pagination li span").length>0){
       $(".page_inserted").remove();
       $(".pagination li span").each(function(i, el){
-        $('<a class="page-link disabled page_inserted">'+$(el).text()+'</a>').appendTo($(el).parent());
+        $('<a class="page-link">'+$(el).text()+'</a>').appendTo($(el).parent());
         $(el).css("display", "none");
       });
     }

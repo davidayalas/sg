@@ -26,7 +26,12 @@ no_index 	= true
 <!-- TEMPLATES -->
 <script type="text/html" id="hit-template">
 		<div class="row">
+			{{#hasMedia}}
 			<div class="col-8 col-12-small">
+			{{/hasMedia}}
+			{{^hasMedia}}
+			<div class="col-12 col-12-small">
+			{{/hasMedia}}
 				<h3><a href="{{path}}">{{{_highlightResult.title.value}}}</a></h3>
 				<p>
 					{{#content}}
@@ -38,6 +43,7 @@ no_index 	= true
 					{{/content}}
 				</p>
 			</div>
+			{{#hasMedia}}
 			<div class="col-4 col-12-small search-image-container">
 				{{#image}}
 					<span data-src="{{path}}/index.json"></span>
@@ -54,6 +60,7 @@ no_index 	= true
 					</iframe>
 				{{/youtube}}
 			</div>
+			{{/hasMedia}}
 		</div>
 		<hr />
 

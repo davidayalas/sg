@@ -138,8 +138,11 @@ body.is-preload #logo.fade-in:before {
 	}
 
 	form#cercador div#search_button button{
-		margin-top: .5em;
-	}
+		margin-top: .55em!important;
+		margin-left: .3em!important;
+		width: 2.5em;
+		height: 3.3em;
+	}		
 
 	body div#logo{
 		background-position: top center;
@@ -187,8 +190,11 @@ body.is-preload #logo.fade-in:before {
 	}
 
 	form#cercador div#search_button button{
-		margin-top: .5em;
-	}
+		margin-top: .55em!important;
+		margin-left: .3em!important;
+		width: 2.5em;
+		height: 3.3em;
+	}		
 
 	body.home div#logo, body div#logo {
 		background-position: top 5%;
@@ -215,8 +221,11 @@ body.is-preload #logo.fade-in:before {
 	}
 
 	form#cercador div#search_button button{
-		margin-top: .5em;
-	}
+		margin-top: .55em!important;
+		margin-left: .3em!important;
+		width: 2.5em;
+		height: 3.3em;
+	}		
 
 	body.home div#logo, body div#logo {
 		background-position: top 0%;
