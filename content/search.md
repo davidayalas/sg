@@ -68,7 +68,7 @@ no_index 	= true
 
 <script type="text/html" id="tag-template">
 	<li>
-		<a href="{{ url }}" class="button small">{{ name }} 
+		<a href="{{ url }}" class="button small">{{ label }} 
 			({{count}})
 		</a>
 	</li>

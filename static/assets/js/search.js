@@ -1,3 +1,15 @@
+function getLocationParam(name){
+  var searchterms = window.location.search.replace("?","").split("&");
+  var term;
+  for(var i=0,z=searchterms.length;i<z;i++){
+    term = searchterms[i].split("=");
+    if(term[0]===name){
+      return term[1];
+    }
+  }
+  return null;
+}
+
 function replaceHighLight(content){
   var matches;
 
@@ -28,12 +40,12 @@ app({
 
 function app(opts) {
   var search = instantsearch({
-    appId: opts.appId,
-    apiKey: opts.apiKey,
     indexName: opts.indexName,
-    urlSync: true,
+    searchClient: algoliasearch(opts.appId, opts.apiKey),
+    routing: true,
     searchParameters: {
-      hitsPerPage: 5
+      hitsPerPage: 5,
+      query: getLocationParam("query")
     },
     searchFunction : function(helper) {
       if (helper.state.query === '') {
@@ -45,7 +57,7 @@ function app(opts) {
 
   /*search.addWidget(
     instantsearch.widgets.searchBox({
-      container: '#query',
+      container: '#query_container',
       placeholder: 'Cerca....'
     })
   );*/
@@ -158,19 +170,9 @@ function app(opts) {
     }
 
     //Search query
-    var searchterms = window.location.search.replace("?","").split("&");
-    var term;
-    for(var i=0,z=searchterms.length;i<z;i++){
-      term = searchterms[i].split("=");
-      if(term[0]==="q"){
-        $("#q").val(decodeURIComponent(term[1]).replace(/\+/g, ' '));
-        break;
-      }
-    }
+    $("#query").val(decodeURIComponent(getLocationParam("query")).replace(/\+/g, ' '));
 
   })
-
-
 
   search.start();
 }
