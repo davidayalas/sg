@@ -3118,11 +3118,11 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-		.pagination li.disabled, .pagination li.disabled a span{
+		.pagination li.disabled, .pagination li.disabled a, .pagination li.disabled a span{
 			pointer-events: none;
 			cursor: default;
 			text-decoration: none;
-			color: #ccc;
+			color: #ccc!important;
 		}
 
 		.pagination .next, .pagination .previous {
