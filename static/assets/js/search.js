@@ -7,7 +7,7 @@ function getLocationParam(name){
       return term[1];
     }
   }
-  return null;
+  return "";
 }
 
 function replaceHighLight(content){
