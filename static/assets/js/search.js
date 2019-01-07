@@ -132,7 +132,7 @@ function app(opts) {
     if($(".pagination li span").length>0){
       $(".page_inserted").remove();
       $(".pagination li span").each(function(i, el){
-        $('<a class="page-link">'+$(el).text()+'</a>').appendTo($(el).parent());
+        $('<a class="page-link page_inserted">'+$(el).text()+'</a>').appendTo($(el).parent());
         $(el).css("display", "none");
       });
     }
