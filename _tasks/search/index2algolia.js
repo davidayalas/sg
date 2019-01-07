@@ -20,7 +20,8 @@ algolia.setSettings({
 var _indexDir = "../../public/"; //read index from and write to...
 
 var indexSetup = {
-	"dir" : "../../content/",
+	"dir" : "../../content/", 
+	"cleanMD" : true,
 	"index_empty_content" : true,
 	"excludeIfProps" : ["no_index"],
 	"excludes" : [
