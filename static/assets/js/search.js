@@ -31,9 +31,9 @@ function app(opts) {
     appId: opts.appId,
     apiKey: opts.apiKey,
     indexName: opts.indexName,
-    routing: true,
+    urlSync: true,
     searchParameters: {
-      hitsPerPage: 5,
+      hitsPerPage: 5
     },
     searchFunction : function(helper) {
       if (helper.state.query === '') {
@@ -163,7 +163,7 @@ function app(opts) {
     for(var i=0,z=searchterms.length;i<z;i++){
       term = searchterms[i].split("=");
       if(term[0]==="q"){
-        $("#q").val(decodeURIComponent(term[1]));
+        $("#q").val(decodeURIComponent(term[1]).replace(/\+/g, ' '));
         break;
       }
     }
