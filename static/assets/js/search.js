@@ -111,11 +111,11 @@ function app(opts) {
 
   search.addWidget(
     instantsearch.widgets.refinementList({
-      container: '.tags ul',
+      container: '.tags ul.actions',
       attributeName: 'tags',
       autoHideContainer: true,
       limit: 10,
-      operator: 'or',
+      operator: 'and',
       templates: {
         header: getHeader(),
         item: getTemplate('tag')
@@ -163,6 +163,14 @@ function observe(){
           $(el).remove();
         })
       });
+
+      if($(".tags ul.actions div").length>0){
+        var tagsRoot = $(".tags ul.actions"); 
+        $(".tags ul.actions li").each(function(i, el){
+          $(el).appendTo(tagsRoot);
+        });
+        $(".tags ul.actions div").remove();
+      }
 
   });
   observer.observe(body, config);

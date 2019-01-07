@@ -30,13 +30,12 @@ no_index 	= true
 				<h3><a href="{{path}}">{{{_highlightResult.title.value}}}</a></h3>
 				<p>
 					{{#content}}
-					{{{_highlightResult.content.value}}}
+					{{{_snippetResult.content.value}}} [...]
 					{{/content}}
 
 					{{^content}}
-					{{{_highlightResult.description.value}}}
+					{{{_snippetResult.description.value}}}
 					{{/content}}
-
 				</p>
 			</div>
 			<div class="col-4 col-12-small search-image-container">
