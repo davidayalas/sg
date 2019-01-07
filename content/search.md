@@ -91,5 +91,5 @@ no_index 	= true
 	<!-- <img src="/images/algolia/Algolia_logo_bg-white.jpg" alt="Logo Algolia" /> -->
 <!--</div> -->
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/instantsearch.js@1.12.1/dist/instantsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.27.1/dist/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.2/dist/instantsearch.min.js"></script>

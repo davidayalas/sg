@@ -1,6 +1,3 @@
-var converter = new showdown.Converter();
-converter.setOption('tables', true);
-
 function replaceHighLight(content){
   var matches;
 
@@ -26,7 +23,7 @@ function replaceHighLight(content){
 app({
   appId: 'STCFX6MFXG',
   apiKey: '7e5bbfd198172dd34161605ddeecbe0d',
-  indexName: 'web_sambo'
+  indexName: 'web_sambo'  
 });
 
 function app(opts) {
@@ -34,7 +31,10 @@ function app(opts) {
     appId: opts.appId,
     apiKey: opts.apiKey,
     indexName: opts.indexName,
-    urlSync: true,
+    routing: true,
+    searchParameters: {
+      hitsPerPage: 5,
+    },
     searchFunction : function(helper) {
       if (helper.state.query === '') {
         //return;
@@ -53,7 +53,6 @@ function app(opts) {
   search.addWidget(
     instantsearch.widgets.hits({
       container: '#hits',
-      hitsPerPage: 10,
       templates: {
         item: getTemplate('hit'),
         empty: getTemplate('no-results')
@@ -129,8 +128,9 @@ function app(opts) {
 
   search.on("render", function(){
 
+    $(".page_inserted").remove();
+    
     if($(".pagination li span").length>0){
-      $(".page_inserted").remove();
       $(".pagination li span").each(function(i, el){
         $('<a class="page-link page_inserted">'+$(el).text()+'</a>').appendTo($(el).parent());
         $(el).css("display", "none");
