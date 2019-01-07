@@ -6,4 +6,4 @@ images:
   - crop: Top
     image: /media/img-20181229-wa0046.jpg
 ---
-* Despues de un intenso año, los componentes del club sambogranollers, cierran el  2018 celebrando una comida, rodeados de buen ambiente y grandes compañeros
+Despues de un intenso año, los componentes del club sambogranollers, cierran el  2018 celebrando una comida, rodeados de buen ambiente y grandes compañeros
