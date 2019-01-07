@@ -176,7 +176,7 @@ var term;
 for(var i=0,z=searchterms.length;i<z;i++){
   term = searchterms[i].split("=");
   if(term[0]==="q"){
-    $("#q").val(term[1]);
+    $("#q").val(decodeURIComponent(term[1]));
     break;
   }
 }
