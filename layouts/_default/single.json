@@ -1,0 +1,25 @@
+{{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+{{ $crop := "Center" }}
+{{ $image := .Params.image }}
+
+{{ if .Params.images }}
+    {{ range first 1 .Params.images }}
+        {{if .image }}
+            {{ $image = .image }}
+        {{ end }}
+
+        {{ if .crop }}
+            {{ $crop = .crop }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ if $image }}
+    {{ $img := $mediaPage.Resources.GetMatch (replace $image "/media/" "") }}            
+    {{ $.Scratch.Set "resized" ($img.Fill (print "448x272 q75 " $crop)) }}
+{{ end }}
+
+{
+    "title" : "{{ .Title }}",
+    "image" : "{{ ($.Scratch.Get "resized").RelPermalink }}"
+}

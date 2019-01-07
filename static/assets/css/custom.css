@@ -17,6 +17,14 @@ form#cercador div#searchbox div#search_button{
 	margin: 0;
 }
 
+.search-image-container{
+	margin: auto;
+}
+
+#hits em{
+	background-color: yellow;
+}
+
 .footer_pagination{
 	text-align: center;
 }

@@ -39,9 +39,9 @@ no_index 	= true
 
 				</p>
 			</div>
-			<div class="col-4 col-12-small">
+			<div class="col-4 col-12-small search-image-container">
 				{{#image}}
-				<img src="{{image}}" />
+					<span data-src="{{path}}/index.json"></span>
 				{{/image}}
 				
 				{{#youtube}}

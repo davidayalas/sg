@@ -60,6 +60,10 @@ function app(opts) {
       },
       transformData : function(item){
         var yt;
+        if(item.images && item.images.length>0){
+          item.image = item.images[0].image;
+        }
+
         if(item.youtube){
           yt = item.youtube.split("/");
           yt = "https://www.youtube.com/embed/"+yt.pop();
@@ -133,12 +137,13 @@ function getHeader(title) {
   //return '<h5>' + title + '</h5>';
 }
 
-// Pagination modification
+// on search...
 function observe(){
   var body = document.getElementsByTagName('body')[0];
   var config = { attributes: true, childList: true, subtree: true };
   var observer = new MutationObserver(function() {
       var resultsContainer = document.querySelector('.footer_pagination span');
+
       if(resultsContainer){
         $(".pagination li span").each(function(i, el){
           $('<a class="page-link disabled">'+$(el).text()+'</a>').appendTo($(el).parent());
@@ -147,8 +152,18 @@ function observe(){
         if($(".pagination li").length===5){
           $(".footer_pagination").css("display", "none");
         }
+
         observer.disconnect();
       }
+
+      //change images
+      $("[data-src]").each(function(i, el){
+        $.getJSON($(this).attr("data-src"), function( data ) {
+          $("<img style='vertical-align: middle;' src='" + data.image + "' />").appendTo($(el).parent());
+          $(el).remove();
+        })
+      });
+
   });
   observer.observe(body, config);
 }

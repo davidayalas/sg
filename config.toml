@@ -7,6 +7,9 @@ contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 
+[outputs]
+  page = ["HTML","JSON"]
+
 [Taxonomies]
     tag = "tags"
 
