@@ -68,8 +68,8 @@ body.single .youtube, body.home article:nth-child(1) .youtube, body.section arti
 	height: 581px;
 }
 
-body.single div#hits .youtube{
-	height: 289px;
+body.single div#hits .youtube, body.single div.multimedias .youtube{
+	height: 289px!important;
 }
 
 .hidden{
