@@ -14,15 +14,18 @@
 {{ $quality := .quality }}
 
 {{ if $images }}
-    {{ range first 1 $images }}
-        {{if .image }}
-            {{ $image = .image }}
-        {{ else if .youtube }}
-            {{ $youtube = .youtube }}
-        {{ end }}
+    {{/* range first 1 $images */}}
+    {{ range $images }}
+        {{ if not $image }}
+            {{if .image }}
+                {{ $image = .image }}
+            {{ else if .youtube }}
+                {{ $youtube = .youtube }}
+            {{ end }}
 
-        {{ if .crop }}
-            {{ $crop = .crop }}
+            {{ if .crop }}
+                {{ $crop = .crop }}
+            {{ end }}
         {{ end }}
     {{ end }}
 {{ end }}
@@ -77,5 +80,5 @@
             src="https://www.youtube.com/embed/{{$yt}}">
     </iframe>
 {{ else }}
-    <span class="image main"><img src="/assets/img/sambo_597.png" alt="" /></span>
+    <!--span class="image main"><img src="/assets/img/sambo_597.png" alt="" /></span-->
 {{ end }}
