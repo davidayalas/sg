@@ -40,8 +40,9 @@
     {{ if $img }}
 
         {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
-            {{/* $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality " " $crop)) */}}
-            {{ $scratch.Set "resized" ($img.Resize (print $width "x" " q" $quality)) }}
+            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality " " $crop)) }}
+        {{ else if gt $img.Width $height }}
+            {{ $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality " " $crop)) }}
         {{ else }}
             {{ $scratch.Set "resized" $img }}
         {{ end }} 
