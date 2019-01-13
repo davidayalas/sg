@@ -39,9 +39,13 @@
     
     {{ if $img }}
 
+    {{$img.Width}} {{$img.Height}}
         {{ if and (gt $img.Width $img.Height) (gt $img.Width $width) }}
             {{/* $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality " " $crop)) */}}
             {{ $scratch.Set "resized" ($img.Resize (print $width "x" " q" $quality)) }}
+        {{ else if gt $img.Height $img.Width }}
+            {{/* $scratch.Set "resized" ($img.Fill (print $width "x" $height " q" $quality " " $crop)) */}}
+            {{ $scratch.Set "resized" ($img.Resize (print "x" $height " q" $quality )) }}
         {{ else }}
             {{ $scratch.Set "resized" $img }}
         {{ end }} 
