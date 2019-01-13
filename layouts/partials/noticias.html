@@ -30,7 +30,7 @@
             <p>{{.Description}}</p>
         </header>
 
-        {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "crop" .Params.crop "youtube" .Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 75) }}
+        {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "crop" .Params.crop "youtube" .Params.youtube "link" true "css" "image main" "width" 1194 "height" 581 "quality" 90) }}
 
         <ul class="actions special">
             <li><a href="{{.URL}}" class="button large">Ver más</a></li>
@@ -54,7 +54,7 @@
                     <h2><a href="{{.URL}}">{{.Title}}</a></h2>
                 </header>
 
-                {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "crop" .Params.crop "youtube" .Params.youtube "link" false "css" "image main" "width" 448 "height" 272 "quality" 75) }}
+                {{ partial "image.html" (dict "c" . "images" .Params.images "image" .Params.image "crop" .Params.crop "youtube" .Params.youtube "link" false "css" "image main" "width" 448 "height" 272 "quality" 90) }}
 
                 <p>{{ .Description }}</p>
                 <ul class="actions special">
