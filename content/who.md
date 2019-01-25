@@ -3,11 +3,15 @@ title: Quiénes somos
 description: ' '
 kind: orphan
 ---
-Somos un Club situado en Granollers que imparte clases de Sambo.
+Somos un Club, situado en Granollers el cual nos dedicamos a impartir clases de **Sambo**.
 
-Las clases son para todas las edades: infantil, júnior, cadete, sénior y veteranos. Y son tanto para mujeres como para hombres.
+Dentro del club también se imparten clases de **Lucha Olímpica, Judo, y defensa Personal**.
 
-No hace falta tener conocimientos de otras artes marciales ni tener un físico especial para la práctica,  cualquiera puede empezar a practicar el Sambo.
+Las clases son para todas las edades a partir de 6 años, e impartiendo esas clases en Colegios e Institutos como actividad extraescolar o en nuestro propio club.
+
+![](/media/photogrid_1545327857920.jpg "Escuela Mestres Muntanya Granollers")
+
+
 
 ## ¿Qué es el Sambo?
 
