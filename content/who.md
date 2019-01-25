@@ -3,21 +3,24 @@ title: Quiénes somos
 description: ' '
 kind: orphan
 ---
-Somos un Club, situado en Granollers el cual nos dedicamos a impartir clases de **Sambo**.
-
-Dentro del club también se imparten clases de **Lucha Olímpica, Judo, y defensa Personal**.
+Somos un Club inscrito en el Consell Català de L'Esport y en la Federación Catalana de Lucha, situado en Granollers el cual nos dedicamos a impartir clases de **Sambo,Lucha Olímpica, Judo, y defensa Personal**.
 
 Las clases son para todas las edades a partir de 6 años, e impartiendo esas clases en Colegios e Institutos como actividad extraescolar o en nuestro propio club.
-
-
-
-![](/media/photogrid_1545327857920.jpg "Escuela Mestres Muntanya Granollers")
 
 Para la práctica del Sambo no hace falta tener conocimientos previos de algún tipo de arte marcial ni lucha, ni tampoco tener un físico especial, todas las clases están adaptadas a cada persona.
 
 Nuestra Directiva se compone de esta manera:
 
 ![](/media/diagrama-en-blanco.png "Junta Directiva")
+
+**Nuestros Entrenadores:**
+
+**\- Luis Torres Cobas**
+
+* 2013- 2017 6 medallas de Oro, 5 de Plata 1 Bronce en Judo categoría Senior
+* \    5 medallas de Oro 
+
+****
 
 
 
