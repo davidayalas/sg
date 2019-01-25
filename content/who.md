@@ -11,13 +11,11 @@ Las clases son para todas las edades a partir de 6 años, e impartiendo esas cla
 
 
 
-
-
 ![](/media/photogrid_1545327857920.jpg "Escuela Mestres Muntanya Granollers")
 
 Para la práctica del Sambo no hace falta tener conocimientos previos de algún tipo de arte marcial ni lucha, ni tampoco tener un físico especial, todas las clases están adaptadas a cada persona.
 
-nuestra Directiva se compone de esta manera:
+Nuestra Directiva se compone de esta manera:
 
 ![](/media/diagrama-en-blanco.png "Junta Directiva")
 
