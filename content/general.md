@@ -2,7 +2,9 @@
 title: Club Sambo Granollers
 title2: Sambo Granollers
 schedule: Martes y Jueves de 19.30h a 21h
-address: 'Carrer del Camp de les Moreres, s/n, 08401 Granollers, Barcelona'
+address: >-
+  Carrer del Camp de les Moreres, s/n, 08401 Granollers, Barcelona (Interior
+  Pistas Atletismo Granollers)
 phone: 93 555 55 55
 email: sambogranollers@gmail.com
 social:
