@@ -3,6 +3,8 @@ title: Quiénes somos
 description: ' '
 kind: orphan
 ---
+![](/media/logo_club_samboka.png)
+
 Somos un Club inscrito en el Consell Català de L'Esport y en la Federación Catalana de Lucha, situado en Granollers el cual nos dedicamos a impartir clases de **Sambo,Lucha Olímpica, Judo, y defensa Personal**.
 
 Las clases son para todas las edades a partir de 6 años, e impartiendo esas clases en Colegios e Institutos como actividad extraescolar o en nuestro propio club.
@@ -20,9 +22,7 @@ Nuestra Directiva se compone de esta manera:
 * 2013- 2017 6 medallas de Oro, 5 de Plata 1 Bronce en Judo categoría Senior
 * \    5 medallas de Oro 
 
-****
-
-
+- - -
 
 ## ¿Qué es el Sambo?
 
