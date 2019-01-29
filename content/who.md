@@ -19,10 +19,32 @@ Nuestra Directiva se compone de esta manera:
 
 **\- Luis Torres Cobas**
 
-* 2013- 2017 6 medallas de Oro, 5 de Plata 1 Bronce en Judo categoría Senior
-* \    5 medallas de Oro 
+* 5º DAN en Judo
+* 1r DAN en Sambo y Monitor Nacional
+
+
+
+* **1973 a 1974-** 2 Bronces en campeonato juvenil (JUDO)
+* **1975**              2 Oros campeonato juvenil y mejor atleta Cuba 1975 (JUDO)
+* **1977 a 1982- **6 Oros, 5 Platas, 1 Bronce en campeonatos nacionales senior de Cuba (JUDO)
+* **2013 - actualidad :**
+* 5 Oros Copa España veteranos (JUDO) (2013-2017)
+* 4 Oros 1 Bronce en Copa Internacional de Judo (2014-2018)
+* 3 Oros Campeonato de España de Judo (2014-2016)
+* 7 Oros 1 Plata en Campeonatos y Copas de Catalunya Judo
+* 1 Bonce Campeonato España Sambo (2017)
+* 2 Oros 1 Plata 1 Bronce en Campeonatos del Mundo Veteranos Judo (2014-2018)
+* 1 Bronce Campeonato Europa Veteranos Sambo
+
+
+
+
+
+
 
 - - -
+
+
 
 ## ¿Qué es el Sambo?
 
