@@ -3,9 +3,7 @@ title: Quiénes somos
 description: ' '
 kind: orphan
 ---
-![](/media/logo_club_samboka.png)
-
-Somos un Club inscrito en el Consell Català de L'Esport y en la Federación Catalana de Lucha, situado en Granollers el cual nos dedicamos a impartir clases de **Sambo,Lucha Olímpica, Judo, y defensa Personal**.
+Somos un Club inscrito en el Consell Català de L'Esport y en la Federación Catalana de Lucha, situado en Granollers, el cual nos dedicamos a impartir clases de **Sambo,Lucha Olímpica, Judo, y defensa Personal**.
 
 Las clases son para todas las edades a partir de 6 años, e impartiendo esas clases en Colegios e Institutos como actividad extraescolar o en nuestro propio club.
 
@@ -17,7 +15,7 @@ Nuestra Directiva se compone de esta manera:
 
 **Nuestros Entrenadores:**
 
-**\- Luis Torres Cobas**
+_**\- Luis Torres Cobas**_
 
 * 5º DAN en Judo
 * 1r DAN en Sambo y Monitor Nacional
@@ -35,6 +33,19 @@ Nuestra Directiva se compone de esta manera:
 * 1 Bonce Campeonato España Sambo (2017)
 * 2 Oros 1 Plata 1 Bronce en Campeonatos del Mundo Veteranos Judo (2014-2018)
 * 1 Bronce Campeonato Europa Veteranos Sambo
+
+_****_
+
+_**\- Víctor Gómez**_
+
+* Entrenador Nacional de Sambo
+* Cinturón Negro de Sambo 2 DAN
+* Grado Experto en MMA
+* Grado Experto en Grappling
+* Instructor Defensa personal Femenina
+* Experto en Psicología y orientación en mujeres con maltrato.
+* Entrenador Territorial Boxeo
+* Cinturón Negro Full Contact
 
 
 
