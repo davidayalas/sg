@@ -3,11 +3,13 @@ title: Quiénes somos
 description: ' '
 kind: orphan
 ---
-Somos un Club inscrito en el Consell Català de L'Esport y en la Federación Catalana de Lucha, situado en Granollers, el cual nos dedicamos a impartir clases de **Sambo,Lucha Olímpica, Judo, y defensa Personal**.
+Somos un Club inscrito en el Consell Català de L'Esport y en la Federación Catalana de Lucha, situado en Granollers, el cual nos dedicamos a impartir clases de **Sambo,Lucha Olímpica, Judo y Defensa Personal**.
 
-Las clases son para todas las edades a partir de 6 años, e impartiendo esas clases en Colegios e Institutos como actividad extraescolar o en nuestro propio club.
+Las clases son para todas las edades a partir de 6 años, e impartiendo esas clases en nuestro Club, en Colegios e Institutos como actividad extraescolar.
 
 Para la práctica del Sambo no hace falta tener conocimientos previos de algún tipo de arte marcial ni lucha, ni tampoco tener un físico especial, todas las clases están adaptadas a cada persona.
+
+Realizamos clases particulares en Defensa Personal, Coaching, Preparación para atletas en Sambo, Lucha y Judo.
 
 Nuestra Directiva se compone de esta manera:
 
@@ -15,16 +17,13 @@ Nuestra Directiva se compone de esta manera:
 
 **Nuestros Entrenadores:**
 
-_**\- Luis Torres Cobas**_
+**_\- Luis Torres Cobas_**
 
 * 5º DAN en Judo
 * 1r DAN en Sambo y Monitor Nacional
-
-
-
 * **1973 a 1974-** 2 Bronces en campeonato juvenil (JUDO)
 * **1975**              2 Oros campeonato juvenil y mejor atleta Cuba 1975 (JUDO)
-* **1977 a 1982- **6 Oros, 5 Platas, 1 Bronce en campeonatos nacionales senior de Cuba (JUDO)
+* **1977 a 1982-** 6 Oros, 5 Platas, 1 Bronce en campeonatos nacionales senior de Cuba (JUDO)
 * **2013 - actualidad :**
 * 5 Oros Copa España veteranos (JUDO) (2013-2017)
 * 4 Oros 1 Bronce en Copa Internacional de Judo (2014-2018)
@@ -34,9 +33,9 @@ _**\- Luis Torres Cobas**_
 * 2 Oros 1 Plata 1 Bronce en Campeonatos del Mundo Veteranos Judo (2014-2018)
 * 1 Bronce Campeonato Europa Veteranos Sambo
 
-_****_
+_\*\*\*\*_
 
-_**\- Víctor Gómez**_
+**_\- Víctor Gómez_**
 
 * Entrenador Nacional de Sambo
 * Cinturón Negro de Sambo 2 DAN
@@ -47,15 +46,7 @@ _**\- Víctor Gómez**_
 * Entrenador Territorial Boxeo
 * Cinturón Negro Full Contact
 
-
-
-
-
-
-
 - - -
-
-
 
 ## ¿Qué es el Sambo?
 
