@@ -1,6 +1,6 @@
 ---
 title: Club Sambo Granollers
-title2: '@SamboGranollers'
+title2: Sambo Granollers
 schedule: 'Martes y Jueves de 18.00h a 19.15h niños    y de   19:15h a 21.00h Adultos '
 address: >-
   Carrer del Camp de les Moreres, s/n, 08401 Granollers, Barcelona (Interior
