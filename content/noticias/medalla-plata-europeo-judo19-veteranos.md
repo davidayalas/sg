@@ -15,6 +15,4 @@ Es un gran honor tener a Luis en el Club, enseña la disciplina y la actitud que
 
 El presidente y la directiva del Club reconocemos su esfuerzo que represnta adquiriendo dia a dia nuevos objetivos, y desde la junta te animamos a que continues con esa ilusión y esfuerzo.
 
-
-
 ![](/media/photo_2019-08-08_17-17-53.jpg)
