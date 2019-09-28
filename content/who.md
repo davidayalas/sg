@@ -1,8 +1,18 @@
 ---
-title: Quiénes somos
+title: Información
 description: ' '
 kind: orphan
 ---
+Clases de Sambo martes y jueves.
+
+Niños de 18.00 a 19.15
+
+Adultos de 19.15 a 21.00
+
+Consultar precios en: sambogranollers@gmail.com
+
+**Quienes Somos** 
+
 Somos un Club inscrito en el Consell Català de L'Esport y en la Federación Catalana de Lucha, situado en Granollers, el cual nos dedicamos a impartir clases de **Sambo,Lucha Olímpica, Judo y Defensa Personal**.
 
 Las clases son para todas las edades a partir de 6 años, e impartiendo esas clases en nuestro Club, en Colegios e Institutos como actividad extraescolar.
@@ -17,7 +27,7 @@ Nuestra Directiva se compone de esta manera:
 
 **Nuestros Entrenadores:**
 
-**_\- Luis Torres Cobas_**
+_**\- Luis Torres Cobas**_
 
 * 5º DAN en Judo
 * 1r DAN en Sambo y Monitor Nacional
@@ -35,7 +45,7 @@ Nuestra Directiva se compone de esta manera:
 
 _\*\*\*\*_
 
-**_\- Víctor Gómez_**
+_**\- Víctor Gómez**_
 
 * Entrenador Nacional de Sambo
 * Cinturón Negro de Sambo 2 DAN
